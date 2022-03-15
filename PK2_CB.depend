@@ -1,0 +1,3055 @@
+# depslib dependency file v1.0
+1646494219 source:c:\users\abdullah\source\codeblocks_projects\pk2_cb\src\engine\pfile.cpp
+	"engine/PFile.hpp"
+	"engine/PLog.hpp"
+	"engine/PUtils.hpp"
+	"engine/platform.hpp"
+	<cstring>
+	<sys/stat.h>
+	<map>
+	<string>
+	<vector>
+	<algorithm>
+	<fstream>
+	<SDL.h>
+	<zip.h>
+	<android/asset_manager.h>
+	<android/asset_manager_jni.h>
+
+1646494219 c:\users\abdullah\source\codeblocks_projects\pk2_cb\src\engine\pfile.hpp
+	"types.hpp"
+	<vector>
+	<string>
+
+1646494219 c:\users\abdullah\source\codeblocks_projects\pk2_cb\src\engine\types.hpp
+	<cstdint>
+
+1646494219 c:\users\abdullah\source\codeblocks_projects\pk2_cb\src\engine\plog.hpp
+	"engine/types.hpp"
+	"engine/PFile.hpp"
+
+1646494219 c:\users\abdullah\source\codeblocks_projects\pk2_cb\src\engine\putils.hpp
+	"engine/platform.hpp"
+	<vector>
+	<string>
+
+1646494219 c:\users\abdullah\source\codeblocks_projects\pk2_cb\src\engine\platform.hpp
+	"engine/types.hpp"
+	<io.h>
+	<windows.h>
+	<direct.h>
+	<direct.h>
+	<dirent.h>
+	<unistd.h>
+	<limits.h>
+
+1646494216 c:\users\abdullah\source\codeblocks_projects\pk2_cb\external\sdl\include\sdl.h
+	"SDL_main.h"
+	"SDL_stdinc.h"
+	"SDL_assert.h"
+	"SDL_atomic.h"
+	"SDL_audio.h"
+	"SDL_clipboard.h"
+	"SDL_cpuinfo.h"
+	"SDL_endian.h"
+	"SDL_error.h"
+	"SDL_events.h"
+	"SDL_filesystem.h"
+	"SDL_gamecontroller.h"
+	"SDL_haptic.h"
+	"SDL_hints.h"
+	"SDL_joystick.h"
+	"SDL_loadso.h"
+	"SDL_log.h"
+	"SDL_messagebox.h"
+	"SDL_metal.h"
+	"SDL_mutex.h"
+	"SDL_power.h"
+	"SDL_render.h"
+	"SDL_rwops.h"
+	"SDL_sensor.h"
+	"SDL_shape.h"
+	"SDL_system.h"
+	"SDL_thread.h"
+	"SDL_timer.h"
+	"SDL_version.h"
+	"SDL_video.h"
+	"SDL_locale.h"
+	"SDL_misc.h"
+	"begin_code.h"
+	"close_code.h"
+
+1646494216 c:\users\abdullah\source\codeblocks_projects\pk2_cb\external\sdl\include\sdl_main.h
+	"SDL_stdinc.h"
+	"begin_code.h"
+	"close_code.h"
+
+1646494216 c:\users\abdullah\source\codeblocks_projects\pk2_cb\external\sdl\include\sdl_stdinc.h
+	"SDL_config.h"
+	<sys/types.h>
+	<stdio.h>
+	<stdlib.h>
+	<stddef.h>
+	<stdarg.h>
+	<stdlib.h>
+	<malloc.h>
+	<stddef.h>
+	<stdarg.h>
+	<memory.h>
+	<string.h>
+	<strings.h>
+	<wchar.h>
+	<inttypes.h>
+	<stdint.h>
+	<ctype.h>
+	<math.h>
+	<float.h>
+	<alloca.h>
+	<malloc.h>
+	<malloc.h>
+	<malloc.h>
+	<stdlib.h>
+	<sal.h>
+	"begin_code.h"
+	"close_code.h"
+
+1646494216 c:\users\abdullah\source\codeblocks_projects\pk2_cb\external\sdl\include\sdl_config.h
+	"SDL_platform.h"
+	"SDL_config_windows.h"
+	"SDL_config_winrt.h"
+	"SDL_config_macosx.h"
+	"SDL_config_iphoneos.h"
+	"SDL_config_android.h"
+	"SDL_config_psp.h"
+	"SDL_config_os2.h"
+	"SDL_config_minimal.h"
+
+1646494216 c:\users\abdullah\source\codeblocks_projects\pk2_cb\external\sdl\include\sdl_platform.h
+	"AvailabilityMacros.h"
+	"TargetConditionals.h"
+	<winapifamily.h>
+	"begin_code.h"
+	"close_code.h"
+
+1646494216 c:\users\abdullah\source\codeblocks_projects\pk2_cb\external\sdl\include\begin_code.h
+
+1646494216 c:\users\abdullah\source\codeblocks_projects\pk2_cb\external\sdl\include\close_code.h
+
+1646494216 c:\users\abdullah\source\codeblocks_projects\pk2_cb\external\sdl\include\sdl_config_windows.h
+	"SDL_platform.h"
+	<sdkddkver.h>
+
+1646494216 c:\users\abdullah\source\codeblocks_projects\pk2_cb\external\sdl\include\sdl_config_winrt.h
+	"SDL_platform.h"
+	<sdkddkver.h>
+
+1646494216 c:\users\abdullah\source\codeblocks_projects\pk2_cb\external\sdl\include\sdl_config_macosx.h
+	"SDL_platform.h"
+	<AvailabilityMacros.h>
+
+1646494216 c:\users\abdullah\source\codeblocks_projects\pk2_cb\external\sdl\include\sdl_config_iphoneos.h
+	"SDL_platform.h"
+
+1646494216 c:\users\abdullah\source\codeblocks_projects\pk2_cb\external\sdl\include\sdl_config_android.h
+	"SDL_platform.h"
+	<stdarg.h>
+
+1646494216 c:\users\abdullah\source\codeblocks_projects\pk2_cb\external\sdl\include\sdl_config_psp.h
+	"SDL_platform.h"
+
+1646494216 c:\users\abdullah\source\codeblocks_projects\pk2_cb\external\sdl\include\sdl_config_os2.h
+	"SDL_platform.h"
+
+1646494216 c:\users\abdullah\source\codeblocks_projects\pk2_cb\external\sdl\include\sdl_config_minimal.h
+	"SDL_platform.h"
+
+1646494216 c:\users\abdullah\source\codeblocks_projects\pk2_cb\external\sdl\include\sdl_assert.h
+	"SDL_config.h"
+	"begin_code.h"
+	<signal.h>
+	"close_code.h"
+
+1646494216 c:\users\abdullah\source\codeblocks_projects\pk2_cb\external\sdl\include\sdl_atomic.h
+	"SDL_stdinc.h"
+	"SDL_platform.h"
+	"begin_code.h"
+	<sys/cpuinline.h>
+	<mbarrier.h>
+	"close_code.h"
+
+1646494216 c:\users\abdullah\source\codeblocks_projects\pk2_cb\external\sdl\include\sdl_audio.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"SDL_endian.h"
+	"SDL_mutex.h"
+	"SDL_thread.h"
+	"SDL_rwops.h"
+	"begin_code.h"
+	"close_code.h"
+
+1646494216 c:\users\abdullah\source\codeblocks_projects\pk2_cb\external\sdl\include\sdl_error.h
+	"SDL_stdinc.h"
+	"begin_code.h"
+	"close_code.h"
+
+1646494216 c:\users\abdullah\source\codeblocks_projects\pk2_cb\external\sdl\include\sdl_endian.h
+	"SDL_stdinc.h"
+	<endian.h>
+	<endian.h>
+	"begin_code.h"
+	"close_code.h"
+
+1646494216 c:\users\abdullah\source\codeblocks_projects\pk2_cb\external\sdl\include\sdl_mutex.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"begin_code.h"
+	"close_code.h"
+
+1646494216 c:\users\abdullah\source\codeblocks_projects\pk2_cb\external\sdl\include\sdl_thread.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"SDL_atomic.h"
+	"SDL_mutex.h"
+	"begin_code.h"
+	<process.h>
+	<process.h>
+	<stdlib.h>
+	"close_code.h"
+
+1646494216 c:\users\abdullah\source\codeblocks_projects\pk2_cb\external\sdl\include\sdl_rwops.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"begin_code.h"
+	"close_code.h"
+
+1646494216 c:\users\abdullah\source\codeblocks_projects\pk2_cb\external\sdl\include\sdl_clipboard.h
+	"SDL_stdinc.h"
+	"begin_code.h"
+	"close_code.h"
+
+1646494216 c:\users\abdullah\source\codeblocks_projects\pk2_cb\external\sdl\include\sdl_cpuinfo.h
+	"SDL_stdinc.h"
+	<intrin.h>
+	<intrin.h>
+	<altivec.h>
+	<arm_neon.h>
+	<armintr.h>
+	<arm_neon.h>
+	<arm64intr.h>
+	<arm64_neon.h>
+	<mm3dnow.h>
+	<immintrin.h>
+	<mmintrin.h>
+	<xmmintrin.h>
+	<emmintrin.h>
+	<pmmintrin.h>
+	"begin_code.h"
+	"close_code.h"
+
+1646494216 c:\users\abdullah\source\codeblocks_projects\pk2_cb\external\sdl\include\sdl_events.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"SDL_video.h"
+	"SDL_keyboard.h"
+	"SDL_mouse.h"
+	"SDL_joystick.h"
+	"SDL_gamecontroller.h"
+	"SDL_quit.h"
+	"SDL_gesture.h"
+	"SDL_touch.h"
+	"begin_code.h"
+	"close_code.h"
+
+1646494216 c:\users\abdullah\source\codeblocks_projects\pk2_cb\external\sdl\include\sdl_video.h
+	"SDL_stdinc.h"
+	"SDL_pixels.h"
+	"SDL_rect.h"
+	"SDL_surface.h"
+	"begin_code.h"
+	"close_code.h"
+
+1646494216 c:\users\abdullah\source\codeblocks_projects\pk2_cb\external\sdl\include\sdl_pixels.h
+	"SDL_stdinc.h"
+	"SDL_endian.h"
+	"begin_code.h"
+	"close_code.h"
+
+1646494216 c:\users\abdullah\source\codeblocks_projects\pk2_cb\external\sdl\include\sdl_rect.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"SDL_pixels.h"
+	"SDL_rwops.h"
+	"begin_code.h"
+	"close_code.h"
+
+1646494216 c:\users\abdullah\source\codeblocks_projects\pk2_cb\external\sdl\include\sdl_surface.h
+	"SDL_stdinc.h"
+	"SDL_pixels.h"
+	"SDL_rect.h"
+	"SDL_blendmode.h"
+	"SDL_rwops.h"
+	"begin_code.h"
+	"close_code.h"
+
+1646494216 c:\users\abdullah\source\codeblocks_projects\pk2_cb\external\sdl\include\sdl_blendmode.h
+	"begin_code.h"
+	"close_code.h"
+
+1646494216 c:\users\abdullah\source\codeblocks_projects\pk2_cb\external\sdl\include\sdl_keyboard.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"SDL_keycode.h"
+	"SDL_video.h"
+	"begin_code.h"
+	"close_code.h"
+
+1646494216 c:\users\abdullah\source\codeblocks_projects\pk2_cb\external\sdl\include\sdl_keycode.h
+	"SDL_stdinc.h"
+	"SDL_scancode.h"
+
+1646494216 c:\users\abdullah\source\codeblocks_projects\pk2_cb\external\sdl\include\sdl_scancode.h
+	"SDL_stdinc.h"
+
+1646494216 c:\users\abdullah\source\codeblocks_projects\pk2_cb\external\sdl\include\sdl_mouse.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"SDL_video.h"
+	"begin_code.h"
+	"close_code.h"
+
+1646494216 c:\users\abdullah\source\codeblocks_projects\pk2_cb\external\sdl\include\sdl_joystick.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"begin_code.h"
+	"close_code.h"
+
+1646494216 c:\users\abdullah\source\codeblocks_projects\pk2_cb\external\sdl\include\sdl_gamecontroller.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"SDL_rwops.h"
+	"SDL_sensor.h"
+	"SDL_joystick.h"
+	"begin_code.h"
+	"close_code.h"
+
+1646494216 c:\users\abdullah\source\codeblocks_projects\pk2_cb\external\sdl\include\sdl_sensor.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"begin_code.h"
+	"close_code.h"
+
+1646494216 c:\users\abdullah\source\codeblocks_projects\pk2_cb\external\sdl\include\sdl_quit.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+
+1646494216 c:\users\abdullah\source\codeblocks_projects\pk2_cb\external\sdl\include\sdl_gesture.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"SDL_video.h"
+	"SDL_touch.h"
+	"begin_code.h"
+	"close_code.h"
+
+1646494216 c:\users\abdullah\source\codeblocks_projects\pk2_cb\external\sdl\include\sdl_touch.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"SDL_video.h"
+	"begin_code.h"
+	"close_code.h"
+
+1646494216 c:\users\abdullah\source\codeblocks_projects\pk2_cb\external\sdl\include\sdl_filesystem.h
+	"SDL_stdinc.h"
+	"begin_code.h"
+	"close_code.h"
+
+1646494216 c:\users\abdullah\source\codeblocks_projects\pk2_cb\external\sdl\include\sdl_haptic.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"SDL_joystick.h"
+	"begin_code.h"
+	"close_code.h"
+
+1646494216 c:\users\abdullah\source\codeblocks_projects\pk2_cb\external\sdl\include\sdl_hints.h
+	"SDL_stdinc.h"
+	"begin_code.h"
+	"close_code.h"
+
+1646494216 c:\users\abdullah\source\codeblocks_projects\pk2_cb\external\sdl\include\sdl_loadso.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"begin_code.h"
+	"close_code.h"
+
+1646494216 c:\users\abdullah\source\codeblocks_projects\pk2_cb\external\sdl\include\sdl_log.h
+	"SDL_stdinc.h"
+	"begin_code.h"
+	"close_code.h"
+
+1646494216 c:\users\abdullah\source\codeblocks_projects\pk2_cb\external\sdl\include\sdl_messagebox.h
+	"SDL_stdinc.h"
+	"SDL_video.h"
+	"begin_code.h"
+	"close_code.h"
+
+1646494216 c:\users\abdullah\source\codeblocks_projects\pk2_cb\external\sdl\include\sdl_metal.h
+	"SDL_video.h"
+	"begin_code.h"
+	"close_code.h"
+
+1646494216 c:\users\abdullah\source\codeblocks_projects\pk2_cb\external\sdl\include\sdl_power.h
+	"SDL_stdinc.h"
+	"begin_code.h"
+	"close_code.h"
+
+1646494216 c:\users\abdullah\source\codeblocks_projects\pk2_cb\external\sdl\include\sdl_render.h
+	"SDL_stdinc.h"
+	"SDL_rect.h"
+	"SDL_video.h"
+	"begin_code.h"
+	"close_code.h"
+
+1646494216 c:\users\abdullah\source\codeblocks_projects\pk2_cb\external\sdl\include\sdl_shape.h
+	"SDL_stdinc.h"
+	"SDL_pixels.h"
+	"SDL_rect.h"
+	"SDL_surface.h"
+	"SDL_video.h"
+	"begin_code.h"
+	"close_code.h"
+
+1646494216 c:\users\abdullah\source\codeblocks_projects\pk2_cb\external\sdl\include\sdl_system.h
+	"SDL_stdinc.h"
+	"SDL_keyboard.h"
+	"SDL_render.h"
+	"SDL_video.h"
+	"begin_code.h"
+	"close_code.h"
+
+1646494216 c:\users\abdullah\source\codeblocks_projects\pk2_cb\external\sdl\include\sdl_timer.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"begin_code.h"
+	"close_code.h"
+
+1646494216 c:\users\abdullah\source\codeblocks_projects\pk2_cb\external\sdl\include\sdl_version.h
+	"SDL_stdinc.h"
+	"begin_code.h"
+	"close_code.h"
+
+1646494216 c:\users\abdullah\source\codeblocks_projects\pk2_cb\external\sdl\include\sdl_locale.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"begin_code.h"
+	"close_code.h"
+
+1646494216 c:\users\abdullah\source\codeblocks_projects\pk2_cb\external\sdl\include\sdl_misc.h
+	"SDL_stdinc.h"
+	"begin_code.h"
+	"close_code.h"
+
+1646494219 source:c:\users\abdullah\source\codeblocks_projects\pk2_cb\src\engine\pfont.cpp
+	"engine/PFont.hpp"
+	"engine/PUtils.hpp"
+	"engine/PDraw.hpp"
+	"engine/PLang.hpp"
+	"engine/platform.hpp"
+	<cmath>
+	<cstring>
+
+1646494219 c:\users\abdullah\source\codeblocks_projects\pk2_cb\src\engine\pfont.hpp
+	"engine/PFile.hpp"
+	"engine/platform.hpp"
+
+1646494219 c:\users\abdullah\source\codeblocks_projects\pk2_cb\src\engine\pdraw.hpp
+	"engine/PFile.hpp"
+	"engine/PFont.hpp"
+	"engine/platform.hpp"
+
+1646494219 c:\users\abdullah\source\codeblocks_projects\pk2_cb\src\engine\plang.hpp
+	<string>
+	<vector>
+	"engine/PFile.hpp"
+	"engine/platform.hpp"
+
+1646494219 source:c:\users\abdullah\source\codeblocks_projects\pk2_cb\src\engine\pgui.cpp
+	"engine/PGui.hpp"
+	"engine/PLog.hpp"
+	"engine/PRender.hpp"
+	<list>
+
+1646494219 c:\users\abdullah\source\codeblocks_projects\pk2_cb\src\engine\pgui.hpp
+	"engine/platform.hpp"
+	"engine/PFile.hpp"
+	"engine/PRender.hpp"
+
+1646494219 c:\users\abdullah\source\codeblocks_projects\pk2_cb\src\engine\prender.hpp
+	"engine/PFile.hpp"
+
+1564029156 c:\users\abdullah\source\codeblocks_projects\pk2_cb\external\test_abd\sdl2-2.0.10\include\sdl.h
+	"SDL_main.h"
+	"SDL_stdinc.h"
+	"SDL_assert.h"
+	"SDL_atomic.h"
+	"SDL_audio.h"
+	"SDL_clipboard.h"
+	"SDL_cpuinfo.h"
+	"SDL_endian.h"
+	"SDL_error.h"
+	"SDL_events.h"
+	"SDL_filesystem.h"
+	"SDL_gamecontroller.h"
+	"SDL_haptic.h"
+	"SDL_hints.h"
+	"SDL_joystick.h"
+	"SDL_loadso.h"
+	"SDL_log.h"
+	"SDL_messagebox.h"
+	"SDL_mutex.h"
+	"SDL_power.h"
+	"SDL_render.h"
+	"SDL_rwops.h"
+	"SDL_sensor.h"
+	"SDL_shape.h"
+	"SDL_system.h"
+	"SDL_thread.h"
+	"SDL_timer.h"
+	"SDL_version.h"
+	"SDL_video.h"
+	"begin_code.h"
+	"close_code.h"
+
+1564029156 c:\users\abdullah\source\codeblocks_projects\pk2_cb\external\test_abd\sdl2-2.0.10\include\sdl_main.h
+	"SDL_stdinc.h"
+	"begin_code.h"
+	"close_code.h"
+
+1564029156 c:\users\abdullah\source\codeblocks_projects\pk2_cb\external\test_abd\sdl2-2.0.10\include\sdl_stdinc.h
+	"SDL_config.h"
+	<sys/types.h>
+	<stdio.h>
+	<stdlib.h>
+	<stddef.h>
+	<stdarg.h>
+	<stdlib.h>
+	<malloc.h>
+	<stddef.h>
+	<stdarg.h>
+	<memory.h>
+	<string.h>
+	<strings.h>
+	<wchar.h>
+	<inttypes.h>
+	<stdint.h>
+	<ctype.h>
+	<math.h>
+	<float.h>
+	<alloca.h>
+	<malloc.h>
+	<malloc.h>
+	<malloc.h>
+	<stdlib.h>
+	<sal.h>
+	"begin_code.h"
+	"close_code.h"
+
+1646568147 c:\users\abdullah\source\codeblocks_projects\pk2_cb\external\test_abd\sdl2-2.0.10\include\sdl_config.h
+	"SDL_platform.h"
+
+1564029156 c:\users\abdullah\source\codeblocks_projects\pk2_cb\external\test_abd\sdl2-2.0.10\include\sdl_platform.h
+	"AvailabilityMacros.h"
+	"TargetConditionals.h"
+	<winapifamily.h>
+	"begin_code.h"
+	"close_code.h"
+
+1564029156 c:\users\abdullah\source\codeblocks_projects\pk2_cb\external\test_abd\sdl2-2.0.10\include\begin_code.h
+
+1564029156 c:\users\abdullah\source\codeblocks_projects\pk2_cb\external\test_abd\sdl2-2.0.10\include\close_code.h
+
+1564029156 c:\users\abdullah\source\codeblocks_projects\pk2_cb\external\test_abd\sdl2-2.0.10\include\sdl_assert.h
+	"SDL_config.h"
+	"begin_code.h"
+	<signal.h>
+	"close_code.h"
+
+1564029156 c:\users\abdullah\source\codeblocks_projects\pk2_cb\external\test_abd\sdl2-2.0.10\include\sdl_atomic.h
+	"SDL_stdinc.h"
+	"SDL_platform.h"
+	"begin_code.h"
+	<sys/cpuinline.h>
+	<mbarrier.h>
+	"close_code.h"
+
+1564029156 c:\users\abdullah\source\codeblocks_projects\pk2_cb\external\test_abd\sdl2-2.0.10\include\sdl_audio.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"SDL_endian.h"
+	"SDL_mutex.h"
+	"SDL_thread.h"
+	"SDL_rwops.h"
+	"begin_code.h"
+	"close_code.h"
+
+1564029156 c:\users\abdullah\source\codeblocks_projects\pk2_cb\external\test_abd\sdl2-2.0.10\include\sdl_error.h
+	"SDL_stdinc.h"
+	"begin_code.h"
+	"close_code.h"
+
+1564029156 c:\users\abdullah\source\codeblocks_projects\pk2_cb\external\test_abd\sdl2-2.0.10\include\sdl_endian.h
+	"SDL_stdinc.h"
+	<endian.h>
+	"begin_code.h"
+	"close_code.h"
+
+1564029156 c:\users\abdullah\source\codeblocks_projects\pk2_cb\external\test_abd\sdl2-2.0.10\include\sdl_mutex.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"begin_code.h"
+	"close_code.h"
+
+1564029156 c:\users\abdullah\source\codeblocks_projects\pk2_cb\external\test_abd\sdl2-2.0.10\include\sdl_thread.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"SDL_atomic.h"
+	"SDL_mutex.h"
+	"begin_code.h"
+	<process.h>
+	<process.h>
+	<stdlib.h>
+	"close_code.h"
+
+1564029156 c:\users\abdullah\source\codeblocks_projects\pk2_cb\external\test_abd\sdl2-2.0.10\include\sdl_rwops.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"begin_code.h"
+	"close_code.h"
+
+1564029156 c:\users\abdullah\source\codeblocks_projects\pk2_cb\external\test_abd\sdl2-2.0.10\include\sdl_clipboard.h
+	"SDL_stdinc.h"
+	"begin_code.h"
+	"close_code.h"
+
+1564029156 c:\users\abdullah\source\codeblocks_projects\pk2_cb\external\test_abd\sdl2-2.0.10\include\sdl_cpuinfo.h
+	"SDL_stdinc.h"
+	<intrin.h>
+	<intrin.h>
+	<altivec.h>
+	<arm_neon.h>
+	<armintr.h>
+	<arm_neon.h>
+	<armintr.h>
+	<arm_neon.h>
+	<mm3dnow.h>
+	<immintrin.h>
+	<mmintrin.h>
+	<xmmintrin.h>
+	<emmintrin.h>
+	<pmmintrin.h>
+	"begin_code.h"
+	"close_code.h"
+
+1564029156 c:\users\abdullah\source\codeblocks_projects\pk2_cb\external\test_abd\sdl2-2.0.10\include\sdl_events.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"SDL_video.h"
+	"SDL_keyboard.h"
+	"SDL_mouse.h"
+	"SDL_joystick.h"
+	"SDL_gamecontroller.h"
+	"SDL_quit.h"
+	"SDL_gesture.h"
+	"SDL_touch.h"
+	"begin_code.h"
+	"close_code.h"
+
+1564029156 c:\users\abdullah\source\codeblocks_projects\pk2_cb\external\test_abd\sdl2-2.0.10\include\sdl_video.h
+	"SDL_stdinc.h"
+	"SDL_pixels.h"
+	"SDL_rect.h"
+	"SDL_surface.h"
+	"begin_code.h"
+	"close_code.h"
+
+1564029156 c:\users\abdullah\source\codeblocks_projects\pk2_cb\external\test_abd\sdl2-2.0.10\include\sdl_pixels.h
+	"SDL_stdinc.h"
+	"SDL_endian.h"
+	"begin_code.h"
+	"close_code.h"
+
+1564029156 c:\users\abdullah\source\codeblocks_projects\pk2_cb\external\test_abd\sdl2-2.0.10\include\sdl_rect.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"SDL_pixels.h"
+	"SDL_rwops.h"
+	"begin_code.h"
+	"close_code.h"
+
+1564029156 c:\users\abdullah\source\codeblocks_projects\pk2_cb\external\test_abd\sdl2-2.0.10\include\sdl_surface.h
+	"SDL_stdinc.h"
+	"SDL_pixels.h"
+	"SDL_rect.h"
+	"SDL_blendmode.h"
+	"SDL_rwops.h"
+	"begin_code.h"
+	"close_code.h"
+
+1564029156 c:\users\abdullah\source\codeblocks_projects\pk2_cb\external\test_abd\sdl2-2.0.10\include\sdl_blendmode.h
+	"begin_code.h"
+	"close_code.h"
+
+1564029156 c:\users\abdullah\source\codeblocks_projects\pk2_cb\external\test_abd\sdl2-2.0.10\include\sdl_keyboard.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"SDL_keycode.h"
+	"SDL_video.h"
+	"begin_code.h"
+	"close_code.h"
+
+1564029156 c:\users\abdullah\source\codeblocks_projects\pk2_cb\external\test_abd\sdl2-2.0.10\include\sdl_keycode.h
+	"SDL_stdinc.h"
+	"SDL_scancode.h"
+
+1564029156 c:\users\abdullah\source\codeblocks_projects\pk2_cb\external\test_abd\sdl2-2.0.10\include\sdl_scancode.h
+	"SDL_stdinc.h"
+
+1564029156 c:\users\abdullah\source\codeblocks_projects\pk2_cb\external\test_abd\sdl2-2.0.10\include\sdl_mouse.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"SDL_video.h"
+	"begin_code.h"
+	"close_code.h"
+
+1564029156 c:\users\abdullah\source\codeblocks_projects\pk2_cb\external\test_abd\sdl2-2.0.10\include\sdl_joystick.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"begin_code.h"
+	"close_code.h"
+
+1564029156 c:\users\abdullah\source\codeblocks_projects\pk2_cb\external\test_abd\sdl2-2.0.10\include\sdl_gamecontroller.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"SDL_rwops.h"
+	"SDL_joystick.h"
+	"begin_code.h"
+	"close_code.h"
+
+1564029156 c:\users\abdullah\source\codeblocks_projects\pk2_cb\external\test_abd\sdl2-2.0.10\include\sdl_quit.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+
+1564029156 c:\users\abdullah\source\codeblocks_projects\pk2_cb\external\test_abd\sdl2-2.0.10\include\sdl_gesture.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"SDL_video.h"
+	"SDL_touch.h"
+	"begin_code.h"
+	"close_code.h"
+
+1564029156 c:\users\abdullah\source\codeblocks_projects\pk2_cb\external\test_abd\sdl2-2.0.10\include\sdl_touch.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"SDL_video.h"
+	"begin_code.h"
+	"close_code.h"
+
+1564029156 c:\users\abdullah\source\codeblocks_projects\pk2_cb\external\test_abd\sdl2-2.0.10\include\sdl_filesystem.h
+	"SDL_stdinc.h"
+	"begin_code.h"
+	"close_code.h"
+
+1564029156 c:\users\abdullah\source\codeblocks_projects\pk2_cb\external\test_abd\sdl2-2.0.10\include\sdl_haptic.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"SDL_joystick.h"
+	"begin_code.h"
+	"close_code.h"
+
+1564029156 c:\users\abdullah\source\codeblocks_projects\pk2_cb\external\test_abd\sdl2-2.0.10\include\sdl_hints.h
+	"SDL_stdinc.h"
+	"begin_code.h"
+	"close_code.h"
+
+1564029156 c:\users\abdullah\source\codeblocks_projects\pk2_cb\external\test_abd\sdl2-2.0.10\include\sdl_loadso.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"begin_code.h"
+	"close_code.h"
+
+1564029156 c:\users\abdullah\source\codeblocks_projects\pk2_cb\external\test_abd\sdl2-2.0.10\include\sdl_log.h
+	"SDL_stdinc.h"
+	"begin_code.h"
+	"close_code.h"
+
+1564029156 c:\users\abdullah\source\codeblocks_projects\pk2_cb\external\test_abd\sdl2-2.0.10\include\sdl_messagebox.h
+	"SDL_stdinc.h"
+	"SDL_video.h"
+	"begin_code.h"
+	"close_code.h"
+
+1564029156 c:\users\abdullah\source\codeblocks_projects\pk2_cb\external\test_abd\sdl2-2.0.10\include\sdl_power.h
+	"SDL_stdinc.h"
+	"begin_code.h"
+	"close_code.h"
+
+1564029156 c:\users\abdullah\source\codeblocks_projects\pk2_cb\external\test_abd\sdl2-2.0.10\include\sdl_render.h
+	"SDL_stdinc.h"
+	"SDL_rect.h"
+	"SDL_video.h"
+	"begin_code.h"
+	"close_code.h"
+
+1564029156 c:\users\abdullah\source\codeblocks_projects\pk2_cb\external\test_abd\sdl2-2.0.10\include\sdl_sensor.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"begin_code.h"
+	"close_code.h"
+
+1564029156 c:\users\abdullah\source\codeblocks_projects\pk2_cb\external\test_abd\sdl2-2.0.10\include\sdl_shape.h
+	"SDL_stdinc.h"
+	"SDL_pixels.h"
+	"SDL_rect.h"
+	"SDL_surface.h"
+	"SDL_video.h"
+	"begin_code.h"
+	"close_code.h"
+
+1564029156 c:\users\abdullah\source\codeblocks_projects\pk2_cb\external\test_abd\sdl2-2.0.10\include\sdl_system.h
+	"SDL_stdinc.h"
+	"SDL_keyboard.h"
+	"SDL_render.h"
+	"SDL_video.h"
+	"begin_code.h"
+	"close_code.h"
+
+1564029156 c:\users\abdullah\source\codeblocks_projects\pk2_cb\external\test_abd\sdl2-2.0.10\include\sdl_timer.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"begin_code.h"
+	"close_code.h"
+
+1564029156 c:\users\abdullah\source\codeblocks_projects\pk2_cb\external\test_abd\sdl2-2.0.10\include\sdl_version.h
+	"SDL_stdinc.h"
+	"begin_code.h"
+	"close_code.h"
+
+1646494219 source:c:\users\abdullah\source\codeblocks_projects\pk2_cb\src\engine\pinput.cpp
+	"engine/PInput.hpp"
+	"engine/PLog.hpp"
+	"engine/PDraw.hpp"
+	"engine/PRender.hpp"
+	"engine/PUtils.hpp"
+	"engine/platform.hpp"
+	<SDL.h>
+	<cstring>
+
+1646494219 c:\users\abdullah\source\codeblocks_projects\pk2_cb\src\engine\pinput.hpp
+	"engine/platform.hpp"
+	<vector>
+
+1646494219 source:c:\users\abdullah\source\codeblocks_projects\pk2_cb\src\engine\piste.cpp
+	"engine/Piste.hpp"
+	"engine/platform.hpp"
+	<SDL.h>
+	<iostream>
+
+1646596336 c:\users\abdullah\source\codeblocks_projects\pk2_cb\src\engine\piste.hpp
+	"engine/platform.hpp"
+	"engine/PDraw.hpp"
+	"engine/PRender.hpp"
+	"engine/PInput.hpp"
+	"engine/PSound.hpp"
+	"engine/PUtils.hpp"
+	"engine/PLang.hpp"
+	"engine/PLog.hpp"
+	"engine/PFile.hpp"
+	"engine/PGui.hpp"
+
+1646494219 c:\users\abdullah\source\codeblocks_projects\pk2_cb\src\engine\psound.hpp
+	"engine/PFile.hpp"
+	"engine/platform.hpp"
+
+1646494219 source:c:\users\abdullah\source\codeblocks_projects\pk2_cb\src\engine\pdraw.cpp
+	"engine/PDraw.hpp"
+	"engine/PFont.hpp"
+	"engine/PLog.hpp"
+	<algorithm>
+	<vector>
+	<SDL_image.h>
+
+1561870323 c:\users\abdullah\source\codeblocks_projects\pk2_cb\external\test_abd\sdl2_image-2.0.5\sdl_image.h
+	"SDL.h"
+	"SDL_version.h"
+	"begin_code.h"
+	"close_code.h"
+
+1646494219 source:c:\users\abdullah\source\codeblocks_projects\pk2_cb\src\engine\plang.cpp
+	"engine/PLang.hpp"
+	<SDL.h>
+	<cstring>
+
+1646494219 source:c:\users\abdullah\source\codeblocks_projects\pk2_cb\src\engine\plog.cpp
+	"engine/PLog.hpp"
+	<ctime>
+	<cstdio>
+	<cstring>
+	<cstdarg>
+	<android/log.h>
+	<string>
+	<SDL_mutex.h>
+
+1646494219 source:c:\users\abdullah\source\codeblocks_projects\pk2_cb\src\engine\prender.cpp
+	"engine/PRender.hpp"
+	"engine/PDraw.hpp"
+	"engine/PLog.hpp"
+	"engine/types.hpp"
+	"engine/render/PGl.hpp"
+	"engine/render/PSdlSoft.hpp"
+	<versionhelpers.h>
+	"engine/render/PSdl.hpp"
+	<SDL.h>
+	<SDL_image.h>
+
+1646494219 c:\users\abdullah\source\codeblocks_projects\pk2_cb\src\engine\render\pgl.hpp
+	"engine/PRender.hpp"
+	"engine/render/PGlFuncs.hpp"
+	<SDL.h>
+
+1646494219 c:\users\abdullah\source\codeblocks_projects\pk2_cb\src\engine\render\pglfuncs.hpp
+	<GL/glcorearb.h>
+
+1646494219 c:\users\abdullah\source\codeblocks_projects\pk2_cb\src\engine\render\psdlsoft.hpp
+	"engine/PRender.hpp"
+	<SDL.h>
+
+1646494219 c:\users\abdullah\source\codeblocks_projects\pk2_cb\src\engine\render\psdl.hpp
+	"engine/PRender.hpp"
+	<SDL.h>
+	<vector>
+
+1646494219 source:c:\users\abdullah\source\codeblocks_projects\pk2_cb\src\engine\psound.cpp
+	"engine/PSound.hpp"
+	"engine/PLog.hpp"
+	"engine/PUtils.hpp"
+	<SDL_mixer.h>
+	<cstring>
+	<queue>
+
+1540997939 c:\users\abdullah\source\codeblocks_projects\pk2_cb\external\test_abd\sdl2_mixer-2.0.4\sdl_mixer.h
+	"SDL_stdinc.h"
+	"SDL_rwops.h"
+	"SDL_audio.h"
+	"SDL_endian.h"
+	"SDL_version.h"
+	"begin_code.h"
+	"close_code.h"
+
+1646494219 source:c:\users\abdullah\source\codeblocks_projects\pk2_cb\src\engine\putils.cpp
+	"engine/PUtils.hpp"
+	"engine/PLog.hpp"
+	"engine/PFile.hpp"
+	<SDL.h>
+	<cstring>
+	<string>
+	<locale>
+	<sys/stat.h>
+	<android/asset_manager.h>
+	<android/asset_manager_jni.h>
+
+1646494219 source:c:\users\abdullah\source\codeblocks_projects\pk2_cb\src\engine\render\pgl.cpp
+	"engine/render/PGl.hpp"
+	"engine/render/PGlFuncs.hpp"
+	"engine/PLog.hpp"
+	<SDL.h>
+
+1646494219 source:c:\users\abdullah\source\codeblocks_projects\pk2_cb\src\engine\render\pglfuncs.cpp
+	"engine/render/PGlFuncs.hpp"
+	"engine/PLog.hpp"
+	<SDL.h>
+	<cstdio>
+
+1646494219 source:c:\users\abdullah\source\codeblocks_projects\pk2_cb\src\engine\render\psdl.cpp
+	"engine/PRender.hpp"
+	"engine/PLog.hpp"
+	"engine/render/PSdl.hpp"
+	<SDL.h>
+
+1646494219 source:c:\users\abdullah\source\codeblocks_projects\pk2_cb\src\engine\render\psdlsoft.cpp
+	"engine/PRender.hpp"
+	"engine/PLog.hpp"
+	"engine/render/PSdlSoft.hpp"
+	<SDL.h>
+
+1646494219 source:c:\users\abdullah\source\codeblocks_projects\pk2_cb\src\episode\episodeclass.cpp
+	"episode/episodeclass.hpp"
+	"episode/mapstore.hpp"
+	"game/mapclass.hpp"
+	"language.hpp"
+	"system.hpp"
+	"save.hpp"
+	"engine/PLog.hpp"
+	"engine/PUtils.hpp"
+	"engine/PFile.hpp"
+	"engine/PDraw.hpp"
+	<cstring>
+	<string>
+
+1646494219 c:\users\abdullah\source\codeblocks_projects\pk2_cb\src\episode\episodeclass.hpp
+	"episode/mapstore.hpp"
+	"engine/platform.hpp"
+	"engine/PFile.hpp"
+
+1646494219 c:\users\abdullah\source\codeblocks_projects\pk2_cb\src\episode\mapstore.hpp
+	"engine/platform.hpp"
+	<vector>
+	<string>
+
+1646494219 c:\users\abdullah\source\codeblocks_projects\pk2_cb\src\game\mapclass.hpp
+	"engine/platform.hpp"
+	"engine/PFile.hpp"
+
+1646494219 c:\users\abdullah\source\codeblocks_projects\pk2_cb\src\language.hpp
+	"engine/PLang.hpp"
+	<vector>
+	<string>
+
+1646494219 c:\users\abdullah\source\codeblocks_projects\pk2_cb\src\system.hpp
+	"engine/PFile.hpp"
+	"engine/platform.hpp"
+	<string>
+
+1646494219 c:\users\abdullah\source\codeblocks_projects\pk2_cb\src\save.hpp
+	"episode/episodeclass.hpp"
+	"engine/platform.hpp"
+
+1646494219 source:c:\users\abdullah\source\codeblocks_projects\pk2_cb\src\episode\mapstore.cpp
+	"episode/mapstore.hpp"
+	"system.hpp"
+	"engine/PUtils.hpp"
+	"engine/PFile.hpp"
+	"engine/PLog.hpp"
+	<cstring>
+	<algorithm>
+
+1646494219 source:c:\users\abdullah\source\codeblocks_projects\pk2_cb\src\game\blocks.cpp
+	"blocks.hpp"
+	"game/game.hpp"
+	"game/mapclass.hpp"
+	"system.hpp"
+	<cstring>
+
+1646494219 c:\users\abdullah\source\codeblocks_projects\pk2_cb\src\game\blocks.hpp
+	"engine/types.hpp"
+
+1646494219 c:\users\abdullah\source\codeblocks_projects\pk2_cb\src\game\game.hpp
+	"engine/types.hpp"
+	"game/mapclass.hpp"
+	"game/sprites.hpp"
+	"game/blocks.hpp"
+
+1646494219 c:\users\abdullah\source\codeblocks_projects\pk2_cb\src\game\sprites.hpp
+	"game/spriteclass.hpp"
+
+1646494219 c:\users\abdullah\source\codeblocks_projects\pk2_cb\src\game\spriteclass.hpp
+	"engine/PFile.hpp"
+	"engine/types.hpp"
+
+1646494219 source:c:\users\abdullah\source\codeblocks_projects\pk2_cb\src\game\game.cpp
+	"game/game.hpp"
+	"game/gifts.hpp"
+	"system.hpp"
+	"gfx/text.hpp"
+	"gfx/particles.hpp"
+	"episode/episodeclass.hpp"
+	"settings.hpp"
+	"gui.hpp"
+	"engine/PLog.hpp"
+	"engine/PSound.hpp"
+	"engine/PDraw.hpp"
+	<cstring>
+
+1646494219 c:\users\abdullah\source\codeblocks_projects\pk2_cb\src\game\gifts.hpp
+	"game/sprites.hpp"
+
+1646494219 c:\users\abdullah\source\codeblocks_projects\pk2_cb\src\gfx\text.hpp
+	"engine/PLang.hpp"
+
+1646494219 c:\users\abdullah\source\codeblocks_projects\pk2_cb\src\gfx\particles.hpp
+	"gfx/particle.hpp"
+	"game/mapclass.hpp"
+
+1646494219 c:\users\abdullah\source\codeblocks_projects\pk2_cb\src\gfx\particle.hpp
+
+1646494219 c:\users\abdullah\source\codeblocks_projects\pk2_cb\src\settings.hpp
+	"engine/platform.hpp"
+	"engine/PFile.hpp"
+
+1646494219 c:\users\abdullah\source\codeblocks_projects\pk2_cb\src\gui.hpp
+
+1646494219 source:c:\users\abdullah\source\codeblocks_projects\pk2_cb\src\game\gifts.cpp
+	"game/gifts.hpp"
+	"game/sprites.hpp"
+	<cstring>
+
+1646494219 source:c:\users\abdullah\source\codeblocks_projects\pk2_cb\src\game\mapclass.cpp
+	"game/mapclass.hpp"
+	"game/sprites.hpp"
+	"game/game.hpp"
+	"gfx/effect.hpp"
+	"language.hpp"
+	"system.hpp"
+	"engine/PDraw.hpp"
+	"engine/PUtils.hpp"
+	"engine/PInput.hpp"
+	"engine/PLog.hpp"
+	<cinttypes>
+	<cstring>
+	<cmath>
+
+1646494219 c:\users\abdullah\source\codeblocks_projects\pk2_cb\src\gfx\effect.hpp
+	"engine/types.hpp"
+
+1646494219 source:c:\users\abdullah\source\codeblocks_projects\pk2_cb\src\game\physics.cpp
+	"game/physics.hpp"
+	"game/game.hpp"
+	"game/sprites.hpp"
+	"game/blocks.hpp"
+	"game/gifts.hpp"
+	"settings.hpp"
+	"gfx/particles.hpp"
+	"gfx/effect.hpp"
+	"gfx/text.hpp"
+	"language.hpp"
+	"sfx.hpp"
+	"system.hpp"
+	"episode/episodeclass.hpp"
+	"gui.hpp"
+	"engine/types.hpp"
+	"engine/PInput.hpp"
+	"engine/PSound.hpp"
+	"engine/PDraw.hpp"
+	<cstring>
+
+1646494219 c:\users\abdullah\source\codeblocks_projects\pk2_cb\src\game\physics.hpp
+
+1646494219 c:\users\abdullah\source\codeblocks_projects\pk2_cb\src\sfx.hpp
+
+1646494219 source:c:\users\abdullah\source\codeblocks_projects\pk2_cb\src\game\spriteclass.cpp
+	"game/spriteclass.hpp"
+	"system.hpp"
+	"engine/PDraw.hpp"
+	"engine/PLog.hpp"
+	"engine/platform.hpp"
+	<cstring>
+
+1646494219 source:c:\users\abdullah\source\codeblocks_projects\pk2_cb\src\game\sprites.cpp
+	"game/sprites.hpp"
+	"engine/PSound.hpp"
+	"engine/PUtils.hpp"
+	"engine/PLog.hpp"
+	"game/game.hpp"
+	"episode/episodeclass.hpp"
+	"physics.hpp"
+	"system.hpp"
+	<cstring>
+
+1646494219 source:c:\users\abdullah\source\codeblocks_projects\pk2_cb\src\gfx\effect.cpp
+	"gfx/effect.hpp"
+	"gfx/particles.hpp"
+	"game/sprites.hpp"
+	"system.hpp"
+	<cstdlib>
+
+1646494219 source:c:\users\abdullah\source\codeblocks_projects\pk2_cb\src\gfx\particle.cpp
+	"gfx/particle.hpp"
+	"engine/PDraw.hpp"
+	"settings.hpp"
+	"system.hpp"
+
+1646494219 source:c:\users\abdullah\source\codeblocks_projects\pk2_cb\src\gfx\particles.cpp
+	"gfx/particle.hpp"
+	"game/mapclass.hpp"
+	"settings.hpp"
+	"system.hpp"
+	<cstdlib>
+	<list>
+	<vector>
+
+1646494219 source:c:\users\abdullah\source\codeblocks_projects\pk2_cb\src\gfx\text.cpp
+	"gfx/text.hpp"
+	"system.hpp"
+	"game/game.hpp"
+	"settings.hpp"
+	"engine/PLog.hpp"
+	"engine/PDraw.hpp"
+	<cstring>
+	<iostream>
+	<list>
+
+1646494219 source:c:\users\abdullah\source\codeblocks_projects\pk2_cb\src\gui.cpp
+	"gui.hpp"
+	"system.hpp"
+	"settings.hpp"
+	"game/gifts.hpp"
+	"game/sprites.hpp"
+	"engine/PRender.hpp"
+	"engine/PGui.hpp"
+	"engine/PInput.hpp"
+	<cmath>
+
+1646494219 source:c:\users\abdullah\source\codeblocks_projects\pk2_cb\src\language.cpp
+	"language.hpp"
+	"engine/PUtils.hpp"
+	"engine/PLog.hpp"
+	<cstring>
+	<string>
+
+1647337951 source:c:\users\abdullah\source\codeblocks_projects\pk2_cb\src\main.cpp
+	<windows.h>
+	"engine/Piste.hpp"
+	"version.hpp"
+	"screens/screens.hpp"
+	"gfx/text.hpp"
+	"game/game.hpp"
+	"episode/episodeclass.hpp"
+	"episode/mapstore.hpp"
+	"save.hpp"
+	"gui.hpp"
+	"system.hpp"
+	"language.hpp"
+	"settings.hpp"
+	<cstring>
+	<algorithm>
+	<SDL.h>
+
+1646494219 c:\users\abdullah\source\codeblocks_projects\pk2_cb\src\version.hpp
+
+1646494219 c:\users\abdullah\source\codeblocks_projects\pk2_cb\src\screens\screens.hpp
+
+1646494219 source:c:\users\abdullah\source\codeblocks_projects\pk2_cb\src\save.cpp
+	"save.hpp"
+	"episode/mapstore.hpp"
+	"system.hpp"
+	"engine/PLog.hpp"
+	<cstring>
+	<string>
+
+1646494219 source:c:\users\abdullah\source\codeblocks_projects\pk2_cb\src\screens\ending.cpp
+	"screens/screens.hpp"
+	"episode/episodeclass.hpp"
+	"gfx/text.hpp"
+	"gui.hpp"
+	"game/game.hpp"
+	"language.hpp"
+	"system.hpp"
+	"settings.hpp"
+	"engine/PLog.hpp"
+	"engine/PDraw.hpp"
+	"engine/PInput.hpp"
+	"engine/PSound.hpp"
+	"engine/PUtils.hpp"
+	"engine/types.hpp"
+
+1646494219 source:c:\users\abdullah\source\codeblocks_projects\pk2_cb\src\screens\intro.cpp
+	"screens/screens.hpp"
+	"gfx/text.hpp"
+	"gui.hpp"
+	"game/game.hpp"
+	"language.hpp"
+	"system.hpp"
+	"settings.hpp"
+	"engine/PDraw.hpp"
+	"engine/PInput.hpp"
+	"engine/PSound.hpp"
+	"engine/PUtils.hpp"
+
+1646494219 source:c:\users\abdullah\source\codeblocks_projects\pk2_cb\src\screens\map.cpp
+	"screens/screens.hpp"
+	"engine/PLog.hpp"
+	"engine/PDraw.hpp"
+	"engine/PInput.hpp"
+	"engine/PSound.hpp"
+	"engine/PUtils.hpp"
+	<cstring>
+	"game/game.hpp"
+	"settings.hpp"
+	"gfx/text.hpp"
+	"language.hpp"
+	"gui.hpp"
+	"episode/episodeclass.hpp"
+	"sfx.hpp"
+	"save.hpp"
+	"system.hpp"
+
+1646494219 source:c:\users\abdullah\source\codeblocks_projects\pk2_cb\src\screens\menu.cpp
+	"screens/screens.hpp"
+	"settings.hpp"
+	"gui.hpp"
+	"game/game.hpp"
+	"gfx/text.hpp"
+	"sfx.hpp"
+	"language.hpp"
+	"episode/episodeclass.hpp"
+	"episode/mapstore.hpp"
+	"save.hpp"
+	"system.hpp"
+	"version.hpp"
+	"engine/Piste.hpp"
+	<cstring>
+	<SDL_system.h>
+
+1646494219 source:c:\users\abdullah\source\codeblocks_projects\pk2_cb\src\screens\playing.cpp
+	"screens/screens.hpp"
+	"engine/Piste.hpp"
+	<cstring>
+	"game/game.hpp"
+	"game/gifts.hpp"
+	"game/sprites.hpp"
+	"gfx/text.hpp"
+	"gfx/particles.hpp"
+	"gfx/effect.hpp"
+	"gui.hpp"
+	"episode/episodeclass.hpp"
+	"language.hpp"
+	"sfx.hpp"
+	"system.hpp"
+	"settings.hpp"
+
+1646494219 source:c:\users\abdullah\source\codeblocks_projects\pk2_cb\src\screens\score.cpp
+	"screens/screens.hpp"
+	"gfx/text.hpp"
+	"language.hpp"
+	"game/game.hpp"
+	"game/gifts.hpp"
+	"gui.hpp"
+	"episode/episodeclass.hpp"
+	"sfx.hpp"
+	"game/sprites.hpp"
+	"system.hpp"
+	"settings.hpp"
+	"save.hpp"
+	"engine/PDraw.hpp"
+	"engine/PInput.hpp"
+	"engine/PSound.hpp"
+	"engine/PUtils.hpp"
+	<cstring>
+
+1646494219 source:c:\users\abdullah\source\codeblocks_projects\pk2_cb\src\screens\screens.cpp
+	"screens/screens.hpp"
+	"sfx.hpp"
+	"settings.hpp"
+	"gui.hpp"
+	"language.hpp"
+	"gfx/text.hpp"
+	"save.hpp"
+	"system.hpp"
+	"game/mapclass.hpp"
+	"episode/episodeclass.hpp"
+	"language.hpp"
+	"engine/Piste.hpp"
+	<cstring>
+	<ctime>
+
+1646494219 source:c:\users\abdullah\source\codeblocks_projects\pk2_cb\src\settings.cpp
+	"settings.hpp"
+	"language.hpp"
+	"system.hpp"
+	"engine/PLog.hpp"
+	"engine/PInput.hpp"
+	"engine/PUtils.hpp"
+	<ctime>
+	<cstring>
+	<string>
+	<SDL_timer.h>
+
+1646494219 source:c:\users\abdullah\source\codeblocks_projects\pk2_cb\src\sfx.cpp
+	"sfx.hpp"
+	"system.hpp"
+	"settings.hpp"
+	"game/game.hpp"
+	"engine/PLog.hpp"
+	"engine/PSound.hpp"
+	<cmath>
+
+1646494219 source:c:\users\abdullah\source\codeblocks_projects\pk2_cb\src\system.cpp
+	"system.hpp"
+	"engine/PLog.hpp"
+	"engine/PUtils.hpp"
+	"engine/PInput.hpp"
+	"engine/PDraw.hpp"
+	"engine/PRender.hpp"
+	"settings.hpp"
+	<cmath>
+	<string>
+
+1646494219 c:\users\abdullah\source\codeblocks_projects\pk2_cb\src\\engine\pdraw.hpp
+	"engine/PFile.hpp"
+	"engine/PFont.hpp"
+	"engine/platform.hpp"
+
+1646494219 c:\users\abdullah\source\codeblocks_projects\pk2_cb\src\\engine\pfile.hpp
+	"types.hpp"
+	<vector>
+	<string>
+
+1646494219 c:\users\abdullah\source\codeblocks_projects\pk2_cb\src\\engine\types.hpp
+	<cstdint>
+
+1646494219 c:\users\abdullah\source\codeblocks_projects\pk2_cb\src\\engine\pfont.hpp
+	"engine/PFile.hpp"
+	"engine/platform.hpp"
+
+1646494219 c:\users\abdullah\source\codeblocks_projects\pk2_cb\src\\engine\platform.hpp
+	"engine/types.hpp"
+	<io.h>
+	<windows.h>
+	<direct.h>
+	<direct.h>
+	<dirent.h>
+	<unistd.h>
+	<limits.h>
+
+1646494219 c:\users\abdullah\source\codeblocks_projects\pk2_cb\src\\engine\plog.hpp
+	"engine/types.hpp"
+	"engine/PFile.hpp"
+
+1646494219 c:\users\abdullah\source\codeblocks_projects\pk2_cb\src\\engine\putils.hpp
+	"engine/platform.hpp"
+	<vector>
+	<string>
+
+1646494219 c:\users\abdullah\source\codeblocks_projects\pk2_cb\src\\engine\plang.hpp
+	<string>
+	<vector>
+	"engine/PFile.hpp"
+	"engine/platform.hpp"
+
+1646494219 c:\users\abdullah\source\codeblocks_projects\pk2_cb\src\\engine\pgui.hpp
+	"engine/platform.hpp"
+	"engine/PFile.hpp"
+	"engine/PRender.hpp"
+
+1646494219 c:\users\abdullah\source\codeblocks_projects\pk2_cb\src\\engine\prender.hpp
+	"engine/PFile.hpp"
+
+1646494219 c:\users\abdullah\source\codeblocks_projects\pk2_cb\src\\engine\pinput.hpp
+	"engine/platform.hpp"
+	<vector>
+
+1646596336 c:\users\abdullah\source\codeblocks_projects\pk2_cb\src\\engine\piste.hpp
+	"engine/platform.hpp"
+	"engine/PDraw.hpp"
+	"engine/PRender.hpp"
+	"engine/PInput.hpp"
+	"engine/PSound.hpp"
+	"engine/PUtils.hpp"
+	"engine/PLang.hpp"
+	"engine/PLog.hpp"
+	"engine/PFile.hpp"
+	"engine/PGui.hpp"
+
+1646494219 c:\users\abdullah\source\codeblocks_projects\pk2_cb\src\\engine\psound.hpp
+	"engine/PFile.hpp"
+	"engine/platform.hpp"
+
+1646494219 c:\users\abdullah\source\codeblocks_projects\pk2_cb\src\\engine\render\pgl.hpp
+	"engine/PRender.hpp"
+	"engine/render/PGlFuncs.hpp"
+	<SDL.h>
+
+1646494219 c:\users\abdullah\source\codeblocks_projects\pk2_cb\src\\engine\render\pglfuncs.hpp
+	<GL/glcorearb.h>
+
+1646494219 c:\users\abdullah\source\codeblocks_projects\pk2_cb\src\\engine\render\psdlsoft.hpp
+	"engine/PRender.hpp"
+	<SDL.h>
+
+1646494219 c:\users\abdullah\source\codeblocks_projects\pk2_cb\src\\engine\render\psdl.hpp
+	"engine/PRender.hpp"
+	<SDL.h>
+	<vector>
+
+1646494219 c:\users\abdullah\source\codeblocks_projects\pk2_cb\src\\episode\episodeclass.hpp
+	"episode/mapstore.hpp"
+	"engine/platform.hpp"
+	"engine/PFile.hpp"
+
+1646494219 c:\users\abdullah\source\codeblocks_projects\pk2_cb\src\\episode\mapstore.hpp
+	"engine/platform.hpp"
+	<vector>
+	<string>
+
+1646494219 c:\users\abdullah\source\codeblocks_projects\pk2_cb\src\\game\mapclass.hpp
+	"engine/platform.hpp"
+	"engine/PFile.hpp"
+
+1646494219 c:\users\abdullah\source\codeblocks_projects\pk2_cb\src\\language.hpp
+	"engine/PLang.hpp"
+	<vector>
+	<string>
+
+1646494219 c:\users\abdullah\source\codeblocks_projects\pk2_cb\src\\system.hpp
+	"engine/PFile.hpp"
+	"engine/platform.hpp"
+	<string>
+
+1646494219 c:\users\abdullah\source\codeblocks_projects\pk2_cb\src\\save.hpp
+	"episode/episodeclass.hpp"
+	"engine/platform.hpp"
+
+1646494219 c:\users\abdullah\source\codeblocks_projects\pk2_cb\src\\game\game.hpp
+	"engine/types.hpp"
+	"game/mapclass.hpp"
+	"game/sprites.hpp"
+	"game/blocks.hpp"
+
+1646494219 c:\users\abdullah\source\codeblocks_projects\pk2_cb\src\\game\sprites.hpp
+	"game/spriteclass.hpp"
+
+1646494219 c:\users\abdullah\source\codeblocks_projects\pk2_cb\src\\game\spriteclass.hpp
+	"engine/PFile.hpp"
+	"engine/types.hpp"
+
+1646494219 c:\users\abdullah\source\codeblocks_projects\pk2_cb\src\\game\blocks.hpp
+	"engine/types.hpp"
+
+1646494219 c:\users\abdullah\source\codeblocks_projects\pk2_cb\src\\game\gifts.hpp
+	"game/sprites.hpp"
+
+1646494219 c:\users\abdullah\source\codeblocks_projects\pk2_cb\src\\gfx\text.hpp
+	"engine/PLang.hpp"
+
+1646494219 c:\users\abdullah\source\codeblocks_projects\pk2_cb\src\\gfx\particles.hpp
+	"gfx/particle.hpp"
+	"game/mapclass.hpp"
+
+1646494219 c:\users\abdullah\source\codeblocks_projects\pk2_cb\src\\gfx\particle.hpp
+
+1646494219 c:\users\abdullah\source\codeblocks_projects\pk2_cb\src\\settings.hpp
+	"engine/platform.hpp"
+	"engine/PFile.hpp"
+
+1646494219 c:\users\abdullah\source\codeblocks_projects\pk2_cb\src\\gui.hpp
+
+1646494219 c:\users\abdullah\source\codeblocks_projects\pk2_cb\src\\gfx\effect.hpp
+	"engine/types.hpp"
+
+1646494219 c:\users\abdullah\source\codeblocks_projects\pk2_cb\src\\game\physics.hpp
+
+1646494219 c:\users\abdullah\source\codeblocks_projects\pk2_cb\src\\sfx.hpp
+
+1646494219 c:\users\abdullah\source\codeblocks_projects\pk2_cb\src\\screens\screens.hpp
+
+1646494219 c:\users\abdullah\source\codeblocks_projects\pk2_cb\src\\version.hpp
+
+1561870398 c:\users\abdullah\source\codeblocks_projects\pk2_cb\external\sdl2_image\x86_64-w64-mingw32\include\sdl2\sdl_image.h
+	"SDL.h"
+	"SDL_version.h"
+	"begin_code.h"
+	"close_code.h"
+
+1628610877 c:\users\abdullah\source\codeblocks_projects\pk2_cb\external\sdl2\x86_64-w64-mingw32\include\sdl2\sdl.h
+	"SDL_main.h"
+	"SDL_stdinc.h"
+	"SDL_assert.h"
+	"SDL_atomic.h"
+	"SDL_audio.h"
+	"SDL_clipboard.h"
+	"SDL_cpuinfo.h"
+	"SDL_endian.h"
+	"SDL_error.h"
+	"SDL_events.h"
+	"SDL_filesystem.h"
+	"SDL_gamecontroller.h"
+	"SDL_haptic.h"
+	"SDL_hints.h"
+	"SDL_joystick.h"
+	"SDL_loadso.h"
+	"SDL_log.h"
+	"SDL_messagebox.h"
+	"SDL_metal.h"
+	"SDL_mutex.h"
+	"SDL_power.h"
+	"SDL_render.h"
+	"SDL_rwops.h"
+	"SDL_sensor.h"
+	"SDL_shape.h"
+	"SDL_system.h"
+	"SDL_thread.h"
+	"SDL_timer.h"
+	"SDL_version.h"
+	"SDL_video.h"
+	"SDL_locale.h"
+	"SDL_misc.h"
+	"begin_code.h"
+	"close_code.h"
+
+1628610877 c:\users\abdullah\source\codeblocks_projects\pk2_cb\external\sdl2\x86_64-w64-mingw32\include\sdl2\sdl_main.h
+	"SDL_stdinc.h"
+	"begin_code.h"
+	"close_code.h"
+
+1628610877 c:\users\abdullah\source\codeblocks_projects\pk2_cb\external\sdl2\x86_64-w64-mingw32\include\sdl2\sdl_stdinc.h
+	"SDL_config.h"
+	<sys/types.h>
+	<stdio.h>
+	<stdlib.h>
+	<stddef.h>
+	<stdarg.h>
+	<stdlib.h>
+	<malloc.h>
+	<stddef.h>
+	<stdarg.h>
+	<memory.h>
+	<string.h>
+	<strings.h>
+	<wchar.h>
+	<inttypes.h>
+	<stdint.h>
+	<ctype.h>
+	<math.h>
+	<float.h>
+	<alloca.h>
+	<malloc.h>
+	<malloc.h>
+	<malloc.h>
+	<stdlib.h>
+	<sal.h>
+	"begin_code.h"
+	"close_code.h"
+
+1628610877 c:\users\abdullah\source\codeblocks_projects\pk2_cb\external\sdl2\x86_64-w64-mingw32\include\sdl2\sdl_config.h
+	"SDL_platform.h"
+	<sdkddkver.h>
+
+1628610877 c:\users\abdullah\source\codeblocks_projects\pk2_cb\external\sdl2\x86_64-w64-mingw32\include\sdl2\sdl_platform.h
+	"AvailabilityMacros.h"
+	"TargetConditionals.h"
+	<winapifamily.h>
+	"begin_code.h"
+	"close_code.h"
+
+1628610877 c:\users\abdullah\source\codeblocks_projects\pk2_cb\external\sdl2\x86_64-w64-mingw32\include\sdl2\begin_code.h
+
+1628610877 c:\users\abdullah\source\codeblocks_projects\pk2_cb\external\sdl2\x86_64-w64-mingw32\include\sdl2\close_code.h
+
+1628610877 c:\users\abdullah\source\codeblocks_projects\pk2_cb\external\sdl2\x86_64-w64-mingw32\include\sdl2\sdl_assert.h
+	"SDL_config.h"
+	"begin_code.h"
+	<signal.h>
+	"close_code.h"
+
+1628610877 c:\users\abdullah\source\codeblocks_projects\pk2_cb\external\sdl2\x86_64-w64-mingw32\include\sdl2\sdl_atomic.h
+	"SDL_stdinc.h"
+	"SDL_platform.h"
+	"begin_code.h"
+	<sys/cpuinline.h>
+	<mbarrier.h>
+	"close_code.h"
+
+1628610877 c:\users\abdullah\source\codeblocks_projects\pk2_cb\external\sdl2\x86_64-w64-mingw32\include\sdl2\sdl_audio.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"SDL_endian.h"
+	"SDL_mutex.h"
+	"SDL_thread.h"
+	"SDL_rwops.h"
+	"begin_code.h"
+	"close_code.h"
+
+1628610877 c:\users\abdullah\source\codeblocks_projects\pk2_cb\external\sdl2\x86_64-w64-mingw32\include\sdl2\sdl_error.h
+	"SDL_stdinc.h"
+	"begin_code.h"
+	"close_code.h"
+
+1628610877 c:\users\abdullah\source\codeblocks_projects\pk2_cb\external\sdl2\x86_64-w64-mingw32\include\sdl2\sdl_endian.h
+	"SDL_stdinc.h"
+	<intrin.h>
+	<endian.h>
+	<endian.h>
+	<sys/endian.h>
+	"begin_code.h"
+	"close_code.h"
+
+1628610877 c:\users\abdullah\source\codeblocks_projects\pk2_cb\external\sdl2\x86_64-w64-mingw32\include\sdl2\sdl_mutex.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"begin_code.h"
+	"close_code.h"
+
+1628610877 c:\users\abdullah\source\codeblocks_projects\pk2_cb\external\sdl2\x86_64-w64-mingw32\include\sdl2\sdl_thread.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"SDL_atomic.h"
+	"SDL_mutex.h"
+	<process.h>
+	<process.h>
+	<stdlib.h>
+	"begin_code.h"
+	"close_code.h"
+
+1628610877 c:\users\abdullah\source\codeblocks_projects\pk2_cb\external\sdl2\x86_64-w64-mingw32\include\sdl2\sdl_rwops.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"begin_code.h"
+	"close_code.h"
+
+1628610877 c:\users\abdullah\source\codeblocks_projects\pk2_cb\external\sdl2\x86_64-w64-mingw32\include\sdl2\sdl_clipboard.h
+	"SDL_stdinc.h"
+	"begin_code.h"
+	"close_code.h"
+
+1628610877 c:\users\abdullah\source\codeblocks_projects\pk2_cb\external\sdl2\x86_64-w64-mingw32\include\sdl2\sdl_cpuinfo.h
+	"SDL_stdinc.h"
+	<intrin.h>
+	<intrin.h>
+	<arm_neon.h>
+	<altivec.h>
+	<arm_neon.h>
+	<armintr.h>
+	<arm_neon.h>
+	<arm64intr.h>
+	<arm64_neon.h>
+	<mm3dnow.h>
+	<immintrin.h>
+	<mmintrin.h>
+	<xmmintrin.h>
+	<emmintrin.h>
+	<pmmintrin.h>
+	"begin_code.h"
+	"close_code.h"
+
+1628610877 c:\users\abdullah\source\codeblocks_projects\pk2_cb\external\sdl2\x86_64-w64-mingw32\include\sdl2\sdl_events.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"SDL_video.h"
+	"SDL_keyboard.h"
+	"SDL_mouse.h"
+	"SDL_joystick.h"
+	"SDL_gamecontroller.h"
+	"SDL_quit.h"
+	"SDL_gesture.h"
+	"SDL_touch.h"
+	"begin_code.h"
+	"close_code.h"
+
+1628610877 c:\users\abdullah\source\codeblocks_projects\pk2_cb\external\sdl2\x86_64-w64-mingw32\include\sdl2\sdl_video.h
+	"SDL_stdinc.h"
+	"SDL_pixels.h"
+	"SDL_rect.h"
+	"SDL_surface.h"
+	"begin_code.h"
+	"close_code.h"
+
+1628610877 c:\users\abdullah\source\codeblocks_projects\pk2_cb\external\sdl2\x86_64-w64-mingw32\include\sdl2\sdl_pixels.h
+	"SDL_stdinc.h"
+	"SDL_endian.h"
+	"begin_code.h"
+	"close_code.h"
+
+1628610877 c:\users\abdullah\source\codeblocks_projects\pk2_cb\external\sdl2\x86_64-w64-mingw32\include\sdl2\sdl_rect.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"SDL_pixels.h"
+	"SDL_rwops.h"
+	"begin_code.h"
+	"close_code.h"
+
+1628610877 c:\users\abdullah\source\codeblocks_projects\pk2_cb\external\sdl2\x86_64-w64-mingw32\include\sdl2\sdl_surface.h
+	"SDL_stdinc.h"
+	"SDL_pixels.h"
+	"SDL_rect.h"
+	"SDL_blendmode.h"
+	"SDL_rwops.h"
+	"begin_code.h"
+	"close_code.h"
+
+1628610877 c:\users\abdullah\source\codeblocks_projects\pk2_cb\external\sdl2\x86_64-w64-mingw32\include\sdl2\sdl_blendmode.h
+	"begin_code.h"
+	"close_code.h"
+
+1628610877 c:\users\abdullah\source\codeblocks_projects\pk2_cb\external\sdl2\x86_64-w64-mingw32\include\sdl2\sdl_keyboard.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"SDL_keycode.h"
+	"SDL_video.h"
+	"begin_code.h"
+	"close_code.h"
+
+1628610877 c:\users\abdullah\source\codeblocks_projects\pk2_cb\external\sdl2\x86_64-w64-mingw32\include\sdl2\sdl_keycode.h
+	"SDL_stdinc.h"
+	"SDL_scancode.h"
+
+1628610877 c:\users\abdullah\source\codeblocks_projects\pk2_cb\external\sdl2\x86_64-w64-mingw32\include\sdl2\sdl_scancode.h
+	"SDL_stdinc.h"
+
+1628610877 c:\users\abdullah\source\codeblocks_projects\pk2_cb\external\sdl2\x86_64-w64-mingw32\include\sdl2\sdl_mouse.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"SDL_video.h"
+	"begin_code.h"
+	"close_code.h"
+
+1628610877 c:\users\abdullah\source\codeblocks_projects\pk2_cb\external\sdl2\x86_64-w64-mingw32\include\sdl2\sdl_joystick.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"begin_code.h"
+	"close_code.h"
+
+1628610877 c:\users\abdullah\source\codeblocks_projects\pk2_cb\external\sdl2\x86_64-w64-mingw32\include\sdl2\sdl_gamecontroller.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"SDL_rwops.h"
+	"SDL_sensor.h"
+	"SDL_joystick.h"
+	"begin_code.h"
+	"close_code.h"
+
+1628610877 c:\users\abdullah\source\codeblocks_projects\pk2_cb\external\sdl2\x86_64-w64-mingw32\include\sdl2\sdl_sensor.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"begin_code.h"
+	"close_code.h"
+
+1628610877 c:\users\abdullah\source\codeblocks_projects\pk2_cb\external\sdl2\x86_64-w64-mingw32\include\sdl2\sdl_quit.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+
+1628610877 c:\users\abdullah\source\codeblocks_projects\pk2_cb\external\sdl2\x86_64-w64-mingw32\include\sdl2\sdl_gesture.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"SDL_video.h"
+	"SDL_touch.h"
+	"begin_code.h"
+	"close_code.h"
+
+1628610877 c:\users\abdullah\source\codeblocks_projects\pk2_cb\external\sdl2\x86_64-w64-mingw32\include\sdl2\sdl_touch.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"SDL_video.h"
+	"begin_code.h"
+	"close_code.h"
+
+1628610877 c:\users\abdullah\source\codeblocks_projects\pk2_cb\external\sdl2\x86_64-w64-mingw32\include\sdl2\sdl_filesystem.h
+	"SDL_stdinc.h"
+	"begin_code.h"
+	"close_code.h"
+
+1628610877 c:\users\abdullah\source\codeblocks_projects\pk2_cb\external\sdl2\x86_64-w64-mingw32\include\sdl2\sdl_haptic.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"SDL_joystick.h"
+	"begin_code.h"
+	"close_code.h"
+
+1628610877 c:\users\abdullah\source\codeblocks_projects\pk2_cb\external\sdl2\x86_64-w64-mingw32\include\sdl2\sdl_hints.h
+	"SDL_stdinc.h"
+	"begin_code.h"
+	"close_code.h"
+
+1628610877 c:\users\abdullah\source\codeblocks_projects\pk2_cb\external\sdl2\x86_64-w64-mingw32\include\sdl2\sdl_loadso.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"begin_code.h"
+	"close_code.h"
+
+1628610877 c:\users\abdullah\source\codeblocks_projects\pk2_cb\external\sdl2\x86_64-w64-mingw32\include\sdl2\sdl_log.h
+	"SDL_stdinc.h"
+	"begin_code.h"
+	"close_code.h"
+
+1628610877 c:\users\abdullah\source\codeblocks_projects\pk2_cb\external\sdl2\x86_64-w64-mingw32\include\sdl2\sdl_messagebox.h
+	"SDL_stdinc.h"
+	"SDL_video.h"
+	"begin_code.h"
+	"close_code.h"
+
+1628610877 c:\users\abdullah\source\codeblocks_projects\pk2_cb\external\sdl2\x86_64-w64-mingw32\include\sdl2\sdl_metal.h
+	"SDL_video.h"
+	"begin_code.h"
+	"close_code.h"
+
+1628610877 c:\users\abdullah\source\codeblocks_projects\pk2_cb\external\sdl2\x86_64-w64-mingw32\include\sdl2\sdl_power.h
+	"SDL_stdinc.h"
+	"begin_code.h"
+	"close_code.h"
+
+1628610877 c:\users\abdullah\source\codeblocks_projects\pk2_cb\external\sdl2\x86_64-w64-mingw32\include\sdl2\sdl_render.h
+	"SDL_stdinc.h"
+	"SDL_rect.h"
+	"SDL_video.h"
+	"begin_code.h"
+	"close_code.h"
+
+1628610877 c:\users\abdullah\source\codeblocks_projects\pk2_cb\external\sdl2\x86_64-w64-mingw32\include\sdl2\sdl_shape.h
+	"SDL_stdinc.h"
+	"SDL_pixels.h"
+	"SDL_rect.h"
+	"SDL_surface.h"
+	"SDL_video.h"
+	"begin_code.h"
+	"close_code.h"
+
+1628610877 c:\users\abdullah\source\codeblocks_projects\pk2_cb\external\sdl2\x86_64-w64-mingw32\include\sdl2\sdl_system.h
+	"SDL_stdinc.h"
+	"SDL_keyboard.h"
+	"SDL_render.h"
+	"SDL_video.h"
+	"begin_code.h"
+	"close_code.h"
+
+1628610877 c:\users\abdullah\source\codeblocks_projects\pk2_cb\external\sdl2\x86_64-w64-mingw32\include\sdl2\sdl_timer.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"begin_code.h"
+	"close_code.h"
+
+1628610877 c:\users\abdullah\source\codeblocks_projects\pk2_cb\external\sdl2\x86_64-w64-mingw32\include\sdl2\sdl_version.h
+	"SDL_stdinc.h"
+	"begin_code.h"
+	"close_code.h"
+
+1628610877 c:\users\abdullah\source\codeblocks_projects\pk2_cb\external\sdl2\x86_64-w64-mingw32\include\sdl2\sdl_locale.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"begin_code.h"
+	"close_code.h"
+
+1628610877 c:\users\abdullah\source\codeblocks_projects\pk2_cb\external\sdl2\x86_64-w64-mingw32\include\sdl2\sdl_misc.h
+	"SDL_stdinc.h"
+	"begin_code.h"
+	"close_code.h"
+
+1540998018 c:\users\abdullah\source\codeblocks_projects\pk2_cb\external\sdl2_mixer\x86_64-w64-mingw32\include\sdl2\sdl_mixer.h
+	"SDL_stdinc.h"
+	"SDL_rwops.h"
+	"SDL_audio.h"
+	"SDL_endian.h"
+	"SDL_version.h"
+	"begin_code.h"
+	"close_code.h"
+
+1646494219 source:c:\users\abdullah\documents\github\pk2\src\engine\pdraw.cpp
+	"engine/PDraw.hpp"
+	"engine/PFont.hpp"
+	"engine/PLog.hpp"
+	<algorithm>
+	<vector>
+	<SDL_image.h>
+
+1646494219 c:\users\abdullah\documents\github\pk2\src\\engine\pdraw.hpp
+	"engine/PFile.hpp"
+	"engine/PFont.hpp"
+	"engine/platform.hpp"
+
+1646494219 c:\users\abdullah\documents\github\pk2\src\\engine\pfile.hpp
+	"types.hpp"
+	<vector>
+	<string>
+
+1646494219 c:\users\abdullah\documents\github\pk2\src\\engine\types.hpp
+	<cstdint>
+
+1646494219 c:\users\abdullah\documents\github\pk2\src\\engine\pfont.hpp
+	"engine/PFile.hpp"
+	"engine/platform.hpp"
+
+1646494219 c:\users\abdullah\documents\github\pk2\src\\engine\platform.hpp
+	"engine/types.hpp"
+	<io.h>
+	<windows.h>
+	<direct.h>
+	<direct.h>
+	<dirent.h>
+	<unistd.h>
+	<limits.h>
+
+1646494219 c:\users\abdullah\documents\github\pk2\src\\engine\plog.hpp
+	"engine/types.hpp"
+	"engine/PFile.hpp"
+
+1561870398 c:\users\abdullah\documents\github\pk2\external\sdl2_image\x86_64-w64-mingw32\include\sdl2\sdl_image.h
+	"SDL.h"
+	"SDL_version.h"
+	"begin_code.h"
+	"close_code.h"
+
+1628610877 c:\users\abdullah\documents\github\pk2\external\sdl2\x86_64-w64-mingw32\include\sdl2\sdl.h
+	"SDL_main.h"
+	"SDL_stdinc.h"
+	"SDL_assert.h"
+	"SDL_atomic.h"
+	"SDL_audio.h"
+	"SDL_clipboard.h"
+	"SDL_cpuinfo.h"
+	"SDL_endian.h"
+	"SDL_error.h"
+	"SDL_events.h"
+	"SDL_filesystem.h"
+	"SDL_gamecontroller.h"
+	"SDL_haptic.h"
+	"SDL_hints.h"
+	"SDL_joystick.h"
+	"SDL_loadso.h"
+	"SDL_log.h"
+	"SDL_messagebox.h"
+	"SDL_metal.h"
+	"SDL_mutex.h"
+	"SDL_power.h"
+	"SDL_render.h"
+	"SDL_rwops.h"
+	"SDL_sensor.h"
+	"SDL_shape.h"
+	"SDL_system.h"
+	"SDL_thread.h"
+	"SDL_timer.h"
+	"SDL_version.h"
+	"SDL_video.h"
+	"SDL_locale.h"
+	"SDL_misc.h"
+	"begin_code.h"
+	"close_code.h"
+
+1628610877 c:\users\abdullah\documents\github\pk2\external\sdl2\x86_64-w64-mingw32\include\sdl2\sdl_main.h
+	"SDL_stdinc.h"
+	"begin_code.h"
+	"close_code.h"
+
+1628610877 c:\users\abdullah\documents\github\pk2\external\sdl2\x86_64-w64-mingw32\include\sdl2\sdl_stdinc.h
+	"SDL_config.h"
+	<sys/types.h>
+	<stdio.h>
+	<stdlib.h>
+	<stddef.h>
+	<stdarg.h>
+	<stdlib.h>
+	<malloc.h>
+	<stddef.h>
+	<stdarg.h>
+	<memory.h>
+	<string.h>
+	<strings.h>
+	<wchar.h>
+	<inttypes.h>
+	<stdint.h>
+	<ctype.h>
+	<math.h>
+	<float.h>
+	<alloca.h>
+	<malloc.h>
+	<malloc.h>
+	<malloc.h>
+	<stdlib.h>
+	<sal.h>
+	"begin_code.h"
+	"close_code.h"
+
+1628610877 c:\users\abdullah\documents\github\pk2\external\sdl2\x86_64-w64-mingw32\include\sdl2\sdl_config.h
+	"SDL_platform.h"
+	<sdkddkver.h>
+
+1628610877 c:\users\abdullah\documents\github\pk2\external\sdl2\x86_64-w64-mingw32\include\sdl2\sdl_platform.h
+	"AvailabilityMacros.h"
+	"TargetConditionals.h"
+	<winapifamily.h>
+	"begin_code.h"
+	"close_code.h"
+
+1628610877 c:\users\abdullah\documents\github\pk2\external\sdl2\x86_64-w64-mingw32\include\sdl2\begin_code.h
+
+1628610877 c:\users\abdullah\documents\github\pk2\external\sdl2\x86_64-w64-mingw32\include\sdl2\close_code.h
+
+1628610877 c:\users\abdullah\documents\github\pk2\external\sdl2\x86_64-w64-mingw32\include\sdl2\sdl_assert.h
+	"SDL_config.h"
+	"begin_code.h"
+	<signal.h>
+	"close_code.h"
+
+1628610877 c:\users\abdullah\documents\github\pk2\external\sdl2\x86_64-w64-mingw32\include\sdl2\sdl_atomic.h
+	"SDL_stdinc.h"
+	"SDL_platform.h"
+	"begin_code.h"
+	<sys/cpuinline.h>
+	<mbarrier.h>
+	"close_code.h"
+
+1628610877 c:\users\abdullah\documents\github\pk2\external\sdl2\x86_64-w64-mingw32\include\sdl2\sdl_audio.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"SDL_endian.h"
+	"SDL_mutex.h"
+	"SDL_thread.h"
+	"SDL_rwops.h"
+	"begin_code.h"
+	"close_code.h"
+
+1628610877 c:\users\abdullah\documents\github\pk2\external\sdl2\x86_64-w64-mingw32\include\sdl2\sdl_error.h
+	"SDL_stdinc.h"
+	"begin_code.h"
+	"close_code.h"
+
+1628610877 c:\users\abdullah\documents\github\pk2\external\sdl2\x86_64-w64-mingw32\include\sdl2\sdl_endian.h
+	"SDL_stdinc.h"
+	<intrin.h>
+	<endian.h>
+	<endian.h>
+	<sys/endian.h>
+	"begin_code.h"
+	"close_code.h"
+
+1628610877 c:\users\abdullah\documents\github\pk2\external\sdl2\x86_64-w64-mingw32\include\sdl2\sdl_mutex.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"begin_code.h"
+	"close_code.h"
+
+1628610877 c:\users\abdullah\documents\github\pk2\external\sdl2\x86_64-w64-mingw32\include\sdl2\sdl_thread.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"SDL_atomic.h"
+	"SDL_mutex.h"
+	<process.h>
+	<process.h>
+	<stdlib.h>
+	"begin_code.h"
+	"close_code.h"
+
+1628610877 c:\users\abdullah\documents\github\pk2\external\sdl2\x86_64-w64-mingw32\include\sdl2\sdl_rwops.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"begin_code.h"
+	"close_code.h"
+
+1628610877 c:\users\abdullah\documents\github\pk2\external\sdl2\x86_64-w64-mingw32\include\sdl2\sdl_clipboard.h
+	"SDL_stdinc.h"
+	"begin_code.h"
+	"close_code.h"
+
+1628610877 c:\users\abdullah\documents\github\pk2\external\sdl2\x86_64-w64-mingw32\include\sdl2\sdl_cpuinfo.h
+	"SDL_stdinc.h"
+	<intrin.h>
+	<intrin.h>
+	<arm_neon.h>
+	<altivec.h>
+	<arm_neon.h>
+	<armintr.h>
+	<arm_neon.h>
+	<arm64intr.h>
+	<arm64_neon.h>
+	<mm3dnow.h>
+	<immintrin.h>
+	<mmintrin.h>
+	<xmmintrin.h>
+	<emmintrin.h>
+	<pmmintrin.h>
+	"begin_code.h"
+	"close_code.h"
+
+1628610877 c:\users\abdullah\documents\github\pk2\external\sdl2\x86_64-w64-mingw32\include\sdl2\sdl_events.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"SDL_video.h"
+	"SDL_keyboard.h"
+	"SDL_mouse.h"
+	"SDL_joystick.h"
+	"SDL_gamecontroller.h"
+	"SDL_quit.h"
+	"SDL_gesture.h"
+	"SDL_touch.h"
+	"begin_code.h"
+	"close_code.h"
+
+1628610877 c:\users\abdullah\documents\github\pk2\external\sdl2\x86_64-w64-mingw32\include\sdl2\sdl_video.h
+	"SDL_stdinc.h"
+	"SDL_pixels.h"
+	"SDL_rect.h"
+	"SDL_surface.h"
+	"begin_code.h"
+	"close_code.h"
+
+1628610877 c:\users\abdullah\documents\github\pk2\external\sdl2\x86_64-w64-mingw32\include\sdl2\sdl_pixels.h
+	"SDL_stdinc.h"
+	"SDL_endian.h"
+	"begin_code.h"
+	"close_code.h"
+
+1628610877 c:\users\abdullah\documents\github\pk2\external\sdl2\x86_64-w64-mingw32\include\sdl2\sdl_rect.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"SDL_pixels.h"
+	"SDL_rwops.h"
+	"begin_code.h"
+	"close_code.h"
+
+1628610877 c:\users\abdullah\documents\github\pk2\external\sdl2\x86_64-w64-mingw32\include\sdl2\sdl_surface.h
+	"SDL_stdinc.h"
+	"SDL_pixels.h"
+	"SDL_rect.h"
+	"SDL_blendmode.h"
+	"SDL_rwops.h"
+	"begin_code.h"
+	"close_code.h"
+
+1628610877 c:\users\abdullah\documents\github\pk2\external\sdl2\x86_64-w64-mingw32\include\sdl2\sdl_blendmode.h
+	"begin_code.h"
+	"close_code.h"
+
+1628610877 c:\users\abdullah\documents\github\pk2\external\sdl2\x86_64-w64-mingw32\include\sdl2\sdl_keyboard.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"SDL_keycode.h"
+	"SDL_video.h"
+	"begin_code.h"
+	"close_code.h"
+
+1628610877 c:\users\abdullah\documents\github\pk2\external\sdl2\x86_64-w64-mingw32\include\sdl2\sdl_keycode.h
+	"SDL_stdinc.h"
+	"SDL_scancode.h"
+
+1628610877 c:\users\abdullah\documents\github\pk2\external\sdl2\x86_64-w64-mingw32\include\sdl2\sdl_scancode.h
+	"SDL_stdinc.h"
+
+1628610877 c:\users\abdullah\documents\github\pk2\external\sdl2\x86_64-w64-mingw32\include\sdl2\sdl_mouse.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"SDL_video.h"
+	"begin_code.h"
+	"close_code.h"
+
+1628610877 c:\users\abdullah\documents\github\pk2\external\sdl2\x86_64-w64-mingw32\include\sdl2\sdl_joystick.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"begin_code.h"
+	"close_code.h"
+
+1628610877 c:\users\abdullah\documents\github\pk2\external\sdl2\x86_64-w64-mingw32\include\sdl2\sdl_gamecontroller.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"SDL_rwops.h"
+	"SDL_sensor.h"
+	"SDL_joystick.h"
+	"begin_code.h"
+	"close_code.h"
+
+1628610877 c:\users\abdullah\documents\github\pk2\external\sdl2\x86_64-w64-mingw32\include\sdl2\sdl_sensor.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"begin_code.h"
+	"close_code.h"
+
+1628610877 c:\users\abdullah\documents\github\pk2\external\sdl2\x86_64-w64-mingw32\include\sdl2\sdl_quit.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+
+1628610877 c:\users\abdullah\documents\github\pk2\external\sdl2\x86_64-w64-mingw32\include\sdl2\sdl_gesture.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"SDL_video.h"
+	"SDL_touch.h"
+	"begin_code.h"
+	"close_code.h"
+
+1628610877 c:\users\abdullah\documents\github\pk2\external\sdl2\x86_64-w64-mingw32\include\sdl2\sdl_touch.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"SDL_video.h"
+	"begin_code.h"
+	"close_code.h"
+
+1628610877 c:\users\abdullah\documents\github\pk2\external\sdl2\x86_64-w64-mingw32\include\sdl2\sdl_filesystem.h
+	"SDL_stdinc.h"
+	"begin_code.h"
+	"close_code.h"
+
+1628610877 c:\users\abdullah\documents\github\pk2\external\sdl2\x86_64-w64-mingw32\include\sdl2\sdl_haptic.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"SDL_joystick.h"
+	"begin_code.h"
+	"close_code.h"
+
+1628610877 c:\users\abdullah\documents\github\pk2\external\sdl2\x86_64-w64-mingw32\include\sdl2\sdl_hints.h
+	"SDL_stdinc.h"
+	"begin_code.h"
+	"close_code.h"
+
+1628610877 c:\users\abdullah\documents\github\pk2\external\sdl2\x86_64-w64-mingw32\include\sdl2\sdl_loadso.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"begin_code.h"
+	"close_code.h"
+
+1628610877 c:\users\abdullah\documents\github\pk2\external\sdl2\x86_64-w64-mingw32\include\sdl2\sdl_log.h
+	"SDL_stdinc.h"
+	"begin_code.h"
+	"close_code.h"
+
+1628610877 c:\users\abdullah\documents\github\pk2\external\sdl2\x86_64-w64-mingw32\include\sdl2\sdl_messagebox.h
+	"SDL_stdinc.h"
+	"SDL_video.h"
+	"begin_code.h"
+	"close_code.h"
+
+1628610877 c:\users\abdullah\documents\github\pk2\external\sdl2\x86_64-w64-mingw32\include\sdl2\sdl_metal.h
+	"SDL_video.h"
+	"begin_code.h"
+	"close_code.h"
+
+1628610877 c:\users\abdullah\documents\github\pk2\external\sdl2\x86_64-w64-mingw32\include\sdl2\sdl_power.h
+	"SDL_stdinc.h"
+	"begin_code.h"
+	"close_code.h"
+
+1628610877 c:\users\abdullah\documents\github\pk2\external\sdl2\x86_64-w64-mingw32\include\sdl2\sdl_render.h
+	"SDL_stdinc.h"
+	"SDL_rect.h"
+	"SDL_video.h"
+	"begin_code.h"
+	"close_code.h"
+
+1628610877 c:\users\abdullah\documents\github\pk2\external\sdl2\x86_64-w64-mingw32\include\sdl2\sdl_shape.h
+	"SDL_stdinc.h"
+	"SDL_pixels.h"
+	"SDL_rect.h"
+	"SDL_surface.h"
+	"SDL_video.h"
+	"begin_code.h"
+	"close_code.h"
+
+1628610877 c:\users\abdullah\documents\github\pk2\external\sdl2\x86_64-w64-mingw32\include\sdl2\sdl_system.h
+	"SDL_stdinc.h"
+	"SDL_keyboard.h"
+	"SDL_render.h"
+	"SDL_video.h"
+	"begin_code.h"
+	"close_code.h"
+
+1628610877 c:\users\abdullah\documents\github\pk2\external\sdl2\x86_64-w64-mingw32\include\sdl2\sdl_timer.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"begin_code.h"
+	"close_code.h"
+
+1628610877 c:\users\abdullah\documents\github\pk2\external\sdl2\x86_64-w64-mingw32\include\sdl2\sdl_version.h
+	"SDL_stdinc.h"
+	"begin_code.h"
+	"close_code.h"
+
+1628610877 c:\users\abdullah\documents\github\pk2\external\sdl2\x86_64-w64-mingw32\include\sdl2\sdl_locale.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"begin_code.h"
+	"close_code.h"
+
+1628610877 c:\users\abdullah\documents\github\pk2\external\sdl2\x86_64-w64-mingw32\include\sdl2\sdl_misc.h
+	"SDL_stdinc.h"
+	"begin_code.h"
+	"close_code.h"
+
+1646494219 source:c:\users\abdullah\documents\github\pk2\src\engine\pfile.cpp
+	"engine/PFile.hpp"
+	"engine/PLog.hpp"
+	"engine/PUtils.hpp"
+	"engine/platform.hpp"
+	<cstring>
+	<sys/stat.h>
+	<map>
+	<string>
+	<vector>
+	<algorithm>
+	<fstream>
+	<SDL.h>
+	<zip.h>
+	<android/asset_manager.h>
+	<android/asset_manager_jni.h>
+
+1646494219 c:\users\abdullah\documents\github\pk2\src\\engine\putils.hpp
+	"engine/platform.hpp"
+	<vector>
+	<string>
+
+1646494219 source:c:\users\abdullah\documents\github\pk2\src\engine\pfont.cpp
+	"engine/PFont.hpp"
+	"engine/PUtils.hpp"
+	"engine/PDraw.hpp"
+	"engine/PLang.hpp"
+	"engine/platform.hpp"
+	<cmath>
+	<cstring>
+
+1646494219 c:\users\abdullah\documents\github\pk2\src\\engine\plang.hpp
+	<string>
+	<vector>
+	"engine/PFile.hpp"
+	"engine/platform.hpp"
+
+1646494219 source:c:\users\abdullah\documents\github\pk2\src\engine\pgui.cpp
+	"engine/PGui.hpp"
+	"engine/PLog.hpp"
+	"engine/PRender.hpp"
+	<list>
+
+1646494219 c:\users\abdullah\documents\github\pk2\src\\engine\pgui.hpp
+	"engine/platform.hpp"
+	"engine/PFile.hpp"
+	"engine/PRender.hpp"
+
+1646494219 c:\users\abdullah\documents\github\pk2\src\\engine\prender.hpp
+	"engine/PFile.hpp"
+
+1646494219 source:c:\users\abdullah\documents\github\pk2\src\engine\pinput.cpp
+	"engine/PInput.hpp"
+	"engine/PLog.hpp"
+	"engine/PDraw.hpp"
+	"engine/PRender.hpp"
+	"engine/PUtils.hpp"
+	"engine/platform.hpp"
+	<SDL.h>
+	<cstring>
+
+1646494219 c:\users\abdullah\documents\github\pk2\src\\engine\pinput.hpp
+	"engine/platform.hpp"
+	<vector>
+
+1646494219 source:c:\users\abdullah\documents\github\pk2\src\engine\piste.cpp
+	"engine/Piste.hpp"
+	"engine/platform.hpp"
+	<SDL.h>
+	<iostream>
+
+1646596336 c:\users\abdullah\documents\github\pk2\src\\engine\piste.hpp
+	"engine/platform.hpp"
+	"engine/PDraw.hpp"
+	"engine/PRender.hpp"
+	"engine/PInput.hpp"
+	"engine/PSound.hpp"
+	"engine/PUtils.hpp"
+	"engine/PLang.hpp"
+	"engine/PLog.hpp"
+	"engine/PFile.hpp"
+	"engine/PGui.hpp"
+
+1646494219 c:\users\abdullah\documents\github\pk2\src\\engine\psound.hpp
+	"engine/PFile.hpp"
+	"engine/platform.hpp"
+
+1646494219 source:c:\users\abdullah\documents\github\pk2\src\engine\plang.cpp
+	"engine/PLang.hpp"
+	<SDL.h>
+	<cstring>
+
+1646494219 source:c:\users\abdullah\documents\github\pk2\src\engine\plog.cpp
+	"engine/PLog.hpp"
+	<ctime>
+	<cstdio>
+	<cstring>
+	<cstdarg>
+	<android/log.h>
+	<string>
+	<SDL_mutex.h>
+
+1646494219 source:c:\users\abdullah\documents\github\pk2\src\engine\prender.cpp
+	"engine/PRender.hpp"
+	"engine/PDraw.hpp"
+	"engine/PLog.hpp"
+	"engine/types.hpp"
+	"engine/render/PGl.hpp"
+	"engine/render/PSdlSoft.hpp"
+	<versionhelpers.h>
+	"engine/render/PSdl.hpp"
+	<SDL.h>
+	<SDL_image.h>
+
+1646494219 c:\users\abdullah\documents\github\pk2\src\\engine\render\pgl.hpp
+	"engine/PRender.hpp"
+	"engine/render/PGlFuncs.hpp"
+	<SDL.h>
+
+1646494219 c:\users\abdullah\documents\github\pk2\src\\engine\render\pglfuncs.hpp
+	<GL/glcorearb.h>
+
+1646494219 c:\users\abdullah\documents\github\pk2\src\\engine\render\psdlsoft.hpp
+	"engine/PRender.hpp"
+	<SDL.h>
+
+1646494219 c:\users\abdullah\documents\github\pk2\src\\engine\render\psdl.hpp
+	"engine/PRender.hpp"
+	<SDL.h>
+	<vector>
+
+1646494219 source:c:\users\abdullah\documents\github\pk2\src\engine\psound.cpp
+	"engine/PSound.hpp"
+	"engine/PLog.hpp"
+	"engine/PUtils.hpp"
+	<SDL_mixer.h>
+	<cstring>
+	<queue>
+
+1540998018 c:\users\abdullah\documents\github\pk2\external\sdl2_mixer\x86_64-w64-mingw32\include\sdl2\sdl_mixer.h
+	"SDL_stdinc.h"
+	"SDL_rwops.h"
+	"SDL_audio.h"
+	"SDL_endian.h"
+	"SDL_version.h"
+	"begin_code.h"
+	"close_code.h"
+
+1646494219 source:c:\users\abdullah\documents\github\pk2\src\engine\putils.cpp
+	"engine/PUtils.hpp"
+	"engine/PLog.hpp"
+	"engine/PFile.hpp"
+	<SDL.h>
+	<cstring>
+	<string>
+	<locale>
+	<sys/stat.h>
+	<android/asset_manager.h>
+	<android/asset_manager_jni.h>
+
+1646494219 source:c:\users\abdullah\documents\github\pk2\src\engine\render\pgl.cpp
+	"engine/render/PGl.hpp"
+	"engine/render/PGlFuncs.hpp"
+	"engine/PLog.hpp"
+	<SDL.h>
+
+1646494219 source:c:\users\abdullah\documents\github\pk2\src\engine\render\pglfuncs.cpp
+	"engine/render/PGlFuncs.hpp"
+	"engine/PLog.hpp"
+	<SDL.h>
+	<cstdio>
+
+1646494219 source:c:\users\abdullah\documents\github\pk2\src\engine\render\psdl.cpp
+	"engine/PRender.hpp"
+	"engine/PLog.hpp"
+	"engine/render/PSdl.hpp"
+	<SDL.h>
+
+1646494219 source:c:\users\abdullah\documents\github\pk2\src\engine\render\psdlsoft.cpp
+	"engine/PRender.hpp"
+	"engine/PLog.hpp"
+	"engine/render/PSdlSoft.hpp"
+	<SDL.h>
+
+1646494219 source:c:\users\abdullah\documents\github\pk2\src\episode\episodeclass.cpp
+	"episode/episodeclass.hpp"
+	"episode/mapstore.hpp"
+	"game/mapclass.hpp"
+	"language.hpp"
+	"system.hpp"
+	"save.hpp"
+	"engine/PLog.hpp"
+	"engine/PUtils.hpp"
+	"engine/PFile.hpp"
+	"engine/PDraw.hpp"
+	<cstring>
+	<string>
+
+1646494219 c:\users\abdullah\documents\github\pk2\src\\episode\episodeclass.hpp
+	"episode/mapstore.hpp"
+	"engine/platform.hpp"
+	"engine/PFile.hpp"
+
+1646494219 c:\users\abdullah\documents\github\pk2\src\\episode\mapstore.hpp
+	"engine/platform.hpp"
+	<vector>
+	<string>
+
+1646494219 c:\users\abdullah\documents\github\pk2\src\\game\mapclass.hpp
+	"engine/platform.hpp"
+	"engine/PFile.hpp"
+
+1646494219 c:\users\abdullah\documents\github\pk2\src\\language.hpp
+	"engine/PLang.hpp"
+	<vector>
+	<string>
+
+1646494219 c:\users\abdullah\documents\github\pk2\src\\system.hpp
+	"engine/PFile.hpp"
+	"engine/platform.hpp"
+	<string>
+
+1646494219 c:\users\abdullah\documents\github\pk2\src\\save.hpp
+	"episode/episodeclass.hpp"
+	"engine/platform.hpp"
+
+1646494219 source:c:\users\abdullah\documents\github\pk2\src\episode\mapstore.cpp
+	"episode/mapstore.hpp"
+	"system.hpp"
+	"engine/PUtils.hpp"
+	"engine/PFile.hpp"
+	"engine/PLog.hpp"
+	<cstring>
+	<algorithm>
+
+1646494219 source:c:\users\abdullah\documents\github\pk2\src\game\blocks.cpp
+	"blocks.hpp"
+	"game/game.hpp"
+	"game/mapclass.hpp"
+	"system.hpp"
+	<cstring>
+
+1646494219 c:\users\abdullah\documents\github\pk2\src\game\blocks.hpp
+	"engine/types.hpp"
+
+1646494219 c:\users\abdullah\documents\github\pk2\src\\game\game.hpp
+	"engine/types.hpp"
+	"game/mapclass.hpp"
+	"game/sprites.hpp"
+	"game/blocks.hpp"
+
+1646494219 c:\users\abdullah\documents\github\pk2\src\\game\sprites.hpp
+	"game/spriteclass.hpp"
+
+1646494219 c:\users\abdullah\documents\github\pk2\src\\game\spriteclass.hpp
+	"engine/PFile.hpp"
+	"engine/types.hpp"
+
+1646494219 c:\users\abdullah\documents\github\pk2\src\\game\blocks.hpp
+	"engine/types.hpp"
+
+1646494219 source:c:\users\abdullah\documents\github\pk2\src\game\game.cpp
+	"game/game.hpp"
+	"game/gifts.hpp"
+	"system.hpp"
+	"gfx/text.hpp"
+	"gfx/particles.hpp"
+	"episode/episodeclass.hpp"
+	"settings.hpp"
+	"gui.hpp"
+	"engine/PLog.hpp"
+	"engine/PSound.hpp"
+	"engine/PDraw.hpp"
+	<cstring>
+
+1646494219 c:\users\abdullah\documents\github\pk2\src\\game\gifts.hpp
+	"game/sprites.hpp"
+
+1646494219 c:\users\abdullah\documents\github\pk2\src\\gfx\text.hpp
+	"engine/PLang.hpp"
+
+1646494219 c:\users\abdullah\documents\github\pk2\src\\gfx\particles.hpp
+	"gfx/particle.hpp"
+	"game/mapclass.hpp"
+
+1646494219 c:\users\abdullah\documents\github\pk2\src\\gfx\particle.hpp
+
+1646494219 c:\users\abdullah\documents\github\pk2\src\\settings.hpp
+	"engine/platform.hpp"
+	"engine/PFile.hpp"
+
+1646494219 c:\users\abdullah\documents\github\pk2\src\\gui.hpp
+
+1646494219 source:c:\users\abdullah\documents\github\pk2\src\game\gifts.cpp
+	"game/gifts.hpp"
+	"game/sprites.hpp"
+	<cstring>
+
+1646494219 source:c:\users\abdullah\documents\github\pk2\src\game\mapclass.cpp
+	"game/mapclass.hpp"
+	"game/sprites.hpp"
+	"game/game.hpp"
+	"gfx/effect.hpp"
+	"language.hpp"
+	"system.hpp"
+	"engine/PDraw.hpp"
+	"engine/PUtils.hpp"
+	"engine/PInput.hpp"
+	"engine/PLog.hpp"
+	<cinttypes>
+	<cstring>
+	<cmath>
+
+1646494219 c:\users\abdullah\documents\github\pk2\src\\gfx\effect.hpp
+	"engine/types.hpp"
+
+1646494219 source:c:\users\abdullah\documents\github\pk2\src\game\physics.cpp
+	"game/physics.hpp"
+	"game/game.hpp"
+	"game/sprites.hpp"
+	"game/blocks.hpp"
+	"game/gifts.hpp"
+	"settings.hpp"
+	"gfx/particles.hpp"
+	"gfx/effect.hpp"
+	"gfx/text.hpp"
+	"language.hpp"
+	"sfx.hpp"
+	"system.hpp"
+	"episode/episodeclass.hpp"
+	"gui.hpp"
+	"engine/types.hpp"
+	"engine/PInput.hpp"
+	"engine/PSound.hpp"
+	"engine/PDraw.hpp"
+	<cstring>
+
+1646494219 c:\users\abdullah\documents\github\pk2\src\\game\physics.hpp
+
+1646494219 c:\users\abdullah\documents\github\pk2\src\\sfx.hpp
+
+1646494219 source:c:\users\abdullah\documents\github\pk2\src\game\spriteclass.cpp
+	"game/spriteclass.hpp"
+	"system.hpp"
+	"engine/PDraw.hpp"
+	"engine/PLog.hpp"
+	"engine/platform.hpp"
+	<cstring>
+
+1646494219 source:c:\users\abdullah\documents\github\pk2\src\game\sprites.cpp
+	"game/sprites.hpp"
+	"engine/PSound.hpp"
+	"engine/PUtils.hpp"
+	"engine/PLog.hpp"
+	"game/game.hpp"
+	"episode/episodeclass.hpp"
+	"physics.hpp"
+	"system.hpp"
+	<cstring>
+
+1646494219 c:\users\abdullah\documents\github\pk2\src\game\physics.hpp
+
+1646494219 source:c:\users\abdullah\documents\github\pk2\src\gfx\effect.cpp
+	"gfx/effect.hpp"
+	"gfx/particles.hpp"
+	"game/sprites.hpp"
+	"system.hpp"
+	<cstdlib>
+
+1646494219 source:c:\users\abdullah\documents\github\pk2\src\gfx\particle.cpp
+	"gfx/particle.hpp"
+	"engine/PDraw.hpp"
+	"settings.hpp"
+	"system.hpp"
+
+1646494219 source:c:\users\abdullah\documents\github\pk2\src\gfx\particles.cpp
+	"gfx/particle.hpp"
+	"game/mapclass.hpp"
+	"settings.hpp"
+	"system.hpp"
+	<cstdlib>
+	<list>
+	<vector>
+
+1646494219 source:c:\users\abdullah\documents\github\pk2\src\gfx\text.cpp
+	"gfx/text.hpp"
+	"system.hpp"
+	"game/game.hpp"
+	"settings.hpp"
+	"engine/PLog.hpp"
+	"engine/PDraw.hpp"
+	<cstring>
+	<iostream>
+	<list>
+
+1646494219 source:c:\users\abdullah\documents\github\pk2\src\gui.cpp
+	"gui.hpp"
+	"system.hpp"
+	"settings.hpp"
+	"game/gifts.hpp"
+	"game/sprites.hpp"
+	"engine/PRender.hpp"
+	"engine/PGui.hpp"
+	"engine/PInput.hpp"
+	<cmath>
+
+1646494219 c:\users\abdullah\documents\github\pk2\src\gui.hpp
+
+1646494219 c:\users\abdullah\documents\github\pk2\src\system.hpp
+	"engine/PFile.hpp"
+	"engine/platform.hpp"
+	<string>
+
+1646494219 c:\users\abdullah\documents\github\pk2\src\engine\pfile.hpp
+	"types.hpp"
+	<vector>
+	<string>
+
+1646494219 c:\users\abdullah\documents\github\pk2\src\engine\types.hpp
+	<cstdint>
+
+1646494219 c:\users\abdullah\documents\github\pk2\src\engine\platform.hpp
+	"engine/types.hpp"
+	<io.h>
+	<windows.h>
+	<direct.h>
+	<direct.h>
+	<dirent.h>
+	<unistd.h>
+	<limits.h>
+
+1646494219 c:\users\abdullah\documents\github\pk2\src\settings.hpp
+	"engine/platform.hpp"
+	"engine/PFile.hpp"
+
+1646494219 c:\users\abdullah\documents\github\pk2\src\game\gifts.hpp
+	"game/sprites.hpp"
+
+1646494219 c:\users\abdullah\documents\github\pk2\src\game\sprites.hpp
+	"game/spriteclass.hpp"
+
+1646494219 c:\users\abdullah\documents\github\pk2\src\engine\prender.hpp
+	"engine/PFile.hpp"
+
+1646494219 c:\users\abdullah\documents\github\pk2\src\engine\pgui.hpp
+	"engine/platform.hpp"
+	"engine/PFile.hpp"
+	"engine/PRender.hpp"
+
+1646494219 c:\users\abdullah\documents\github\pk2\src\engine\pinput.hpp
+	"engine/platform.hpp"
+	<vector>
+
+1646494219 source:c:\users\abdullah\documents\github\pk2\src\language.cpp
+	"language.hpp"
+	"engine/PUtils.hpp"
+	"engine/PLog.hpp"
+	<cstring>
+	<string>
+
+1646494219 c:\users\abdullah\documents\github\pk2\src\language.hpp
+	"engine/PLang.hpp"
+	<vector>
+	<string>
+
+1646494219 c:\users\abdullah\documents\github\pk2\src\engine\plang.hpp
+	<string>
+	<vector>
+	"engine/PFile.hpp"
+	"engine/platform.hpp"
+
+1646494219 c:\users\abdullah\documents\github\pk2\src\engine\putils.hpp
+	"engine/platform.hpp"
+	<vector>
+	<string>
+
+1646494219 c:\users\abdullah\documents\github\pk2\src\engine\plog.hpp
+	"engine/types.hpp"
+	"engine/PFile.hpp"
+
+1647337951 source:c:\users\abdullah\documents\github\pk2\src\main.cpp
+	<windows.h>
+	"engine/Piste.hpp"
+	"version.hpp"
+	"screens/screens.hpp"
+	"gfx/text.hpp"
+	"game/game.hpp"
+	"episode/episodeclass.hpp"
+	"episode/mapstore.hpp"
+	"save.hpp"
+	"gui.hpp"
+	"system.hpp"
+	"language.hpp"
+	"settings.hpp"
+	<cstring>
+	<algorithm>
+	<SDL.h>
+
+1646596336 c:\users\abdullah\documents\github\pk2\src\engine\piste.hpp
+	"engine/platform.hpp"
+	"engine/PDraw.hpp"
+	"engine/PRender.hpp"
+	"engine/PInput.hpp"
+	"engine/PSound.hpp"
+	"engine/PUtils.hpp"
+	"engine/PLang.hpp"
+	"engine/PLog.hpp"
+	"engine/PFile.hpp"
+	"engine/PGui.hpp"
+
+1646494219 c:\users\abdullah\documents\github\pk2\src\version.hpp
+
+1646494219 c:\users\abdullah\documents\github\pk2\src\screens\screens.hpp
+
+1646494219 c:\users\abdullah\documents\github\pk2\src\gfx\text.hpp
+	"engine/PLang.hpp"
+
+1646494219 c:\users\abdullah\documents\github\pk2\src\game\game.hpp
+	"engine/types.hpp"
+	"game/mapclass.hpp"
+	"game/sprites.hpp"
+	"game/blocks.hpp"
+
+1646494219 c:\users\abdullah\documents\github\pk2\src\episode\episodeclass.hpp
+	"episode/mapstore.hpp"
+	"engine/platform.hpp"
+	"engine/PFile.hpp"
+
+1646494219 c:\users\abdullah\documents\github\pk2\src\episode\mapstore.hpp
+	"engine/platform.hpp"
+	<vector>
+	<string>
+
+1646494219 c:\users\abdullah\documents\github\pk2\src\save.hpp
+	"episode/episodeclass.hpp"
+	"engine/platform.hpp"
+
+1646494219 source:c:\users\abdullah\documents\github\pk2\src\save.cpp
+	"save.hpp"
+	"episode/mapstore.hpp"
+	"system.hpp"
+	"engine/PLog.hpp"
+	<cstring>
+	<string>
+
+1646494219 source:c:\users\abdullah\documents\github\pk2\src\screens\ending.cpp
+	"screens/screens.hpp"
+	"episode/episodeclass.hpp"
+	"gfx/text.hpp"
+	"gui.hpp"
+	"game/game.hpp"
+	"language.hpp"
+	"system.hpp"
+	"settings.hpp"
+	"engine/PLog.hpp"
+	"engine/PDraw.hpp"
+	"engine/PInput.hpp"
+	"engine/PSound.hpp"
+	"engine/PUtils.hpp"
+	"engine/types.hpp"
+
+1646494219 c:\users\abdullah\documents\github\pk2\src\\screens\screens.hpp
+
+1646494219 source:c:\users\abdullah\documents\github\pk2\src\screens\intro.cpp
+	"screens/screens.hpp"
+	"gfx/text.hpp"
+	"gui.hpp"
+	"game/game.hpp"
+	"language.hpp"
+	"system.hpp"
+	"settings.hpp"
+	"engine/PDraw.hpp"
+	"engine/PInput.hpp"
+	"engine/PSound.hpp"
+	"engine/PUtils.hpp"
+
+1646494219 source:c:\users\abdullah\documents\github\pk2\src\screens\map.cpp
+	"screens/screens.hpp"
+	"engine/PLog.hpp"
+	"engine/PDraw.hpp"
+	"engine/PInput.hpp"
+	"engine/PSound.hpp"
+	"engine/PUtils.hpp"
+	<cstring>
+	"game/game.hpp"
+	"settings.hpp"
+	"gfx/text.hpp"
+	"language.hpp"
+	"gui.hpp"
+	"episode/episodeclass.hpp"
+	"sfx.hpp"
+	"save.hpp"
+	"system.hpp"
+
+1646494219 source:c:\users\abdullah\documents\github\pk2\src\screens\menu.cpp
+	"screens/screens.hpp"
+	"settings.hpp"
+	"gui.hpp"
+	"game/game.hpp"
+	"gfx/text.hpp"
+	"sfx.hpp"
+	"language.hpp"
+	"episode/episodeclass.hpp"
+	"episode/mapstore.hpp"
+	"save.hpp"
+	"system.hpp"
+	"version.hpp"
+	"engine/Piste.hpp"
+	<cstring>
+	<SDL_system.h>
+
+1646494219 c:\users\abdullah\documents\github\pk2\src\\version.hpp
+
+1646494219 source:c:\users\abdullah\documents\github\pk2\src\screens\playing.cpp
+	"screens/screens.hpp"
+	"engine/Piste.hpp"
+	<cstring>
+	"game/game.hpp"
+	"game/gifts.hpp"
+	"game/sprites.hpp"
+	"gfx/text.hpp"
+	"gfx/particles.hpp"
+	"gfx/effect.hpp"
+	"gui.hpp"
+	"episode/episodeclass.hpp"
+	"language.hpp"
+	"sfx.hpp"
+	"system.hpp"
+	"settings.hpp"
+
+1646494219 source:c:\users\abdullah\documents\github\pk2\src\screens\score.cpp
+	"screens/screens.hpp"
+	"gfx/text.hpp"
+	"language.hpp"
+	"game/game.hpp"
+	"game/gifts.hpp"
+	"gui.hpp"
+	"episode/episodeclass.hpp"
+	"sfx.hpp"
+	"game/sprites.hpp"
+	"system.hpp"
+	"settings.hpp"
+	"save.hpp"
+	"engine/PDraw.hpp"
+	"engine/PInput.hpp"
+	"engine/PSound.hpp"
+	"engine/PUtils.hpp"
+	<cstring>
+
+1646494219 source:c:\users\abdullah\documents\github\pk2\src\screens\screens.cpp
+	"screens/screens.hpp"
+	"sfx.hpp"
+	"settings.hpp"
+	"gui.hpp"
+	"language.hpp"
+	"gfx/text.hpp"
+	"save.hpp"
+	"system.hpp"
+	"game/mapclass.hpp"
+	"episode/episodeclass.hpp"
+	"language.hpp"
+	"engine/Piste.hpp"
+	<cstring>
+	<ctime>
+
+1646494219 source:c:\users\abdullah\documents\github\pk2\src\settings.cpp
+	"settings.hpp"
+	"language.hpp"
+	"system.hpp"
+	"engine/PLog.hpp"
+	"engine/PInput.hpp"
+	"engine/PUtils.hpp"
+	<ctime>
+	<cstring>
+	<string>
+	<SDL_timer.h>
+
+1646494219 source:c:\users\abdullah\documents\github\pk2\src\sfx.cpp
+	"sfx.hpp"
+	"system.hpp"
+	"settings.hpp"
+	"game/game.hpp"
+	"engine/PLog.hpp"
+	"engine/PSound.hpp"
+	<cmath>
+
+1646494219 c:\users\abdullah\documents\github\pk2\src\sfx.hpp
+
+1646494219 c:\users\abdullah\documents\github\pk2\src\engine\psound.hpp
+	"engine/PFile.hpp"
+	"engine/platform.hpp"
+
+1646494219 source:c:\users\abdullah\documents\github\pk2\src\system.cpp
+	"system.hpp"
+	"engine/PLog.hpp"
+	"engine/PUtils.hpp"
+	"engine/PInput.hpp"
+	"engine/PDraw.hpp"
+	"engine/PRender.hpp"
+	"settings.hpp"
+	<cmath>
+	<string>
+
+1646494219 c:\users\abdullah\documents\github\pk2\src\engine\pdraw.hpp
+	"engine/PFile.hpp"
+	"engine/PFont.hpp"
+	"engine/platform.hpp"
+

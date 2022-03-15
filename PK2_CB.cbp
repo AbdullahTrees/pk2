@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="PK2_CB" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="Debug">
+				<Option output="res/PK2_CB" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Debug/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Option projectLinkerOptionsRelation="2" />
+				<Compiler>
+					<Add option="-Wall" />
+					<Add option="-std=gnu++17" />
+					<Add option="-g" />
+					<Add option="-mconsole" />
+					<Add option="-static-libgcc -static-libstdc++" />
+					<Add directory="src/" />
+					<Add directory="external/SDL2/x86_64-w64-mingw32/include/SDL2" />
+					<Add directory="external/SDL2_image/x86_64-w64-mingw32/include/SDL2" />
+					<Add directory="external/SDL2_mixer/x86_64-w64-mingw32/include/SDL2" />
+				</Compiler>
+				<Linker>
+					<Add option="-lSDL2 -lSDL2_image -lSDL2_mixer" />
+					<Add directory="src/" />
+					<Add directory="external/SDL2/x86_64-w64-mingw32/lib" />
+					<Add directory="external/SDL2_image/x86_64-w64-mingw32/lib" />
+					<Add directory="external/SDL2_mixer/x86_64-w64-mingw32/lib" />
+				</Linker>
+			</Target>
+			<Target title="Release">
+				<Option output="bin/Release/PK2_CB" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Release/" />
+				<Option type="0" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-O2" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+				</Linker>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="-Wall" />
+		</Compiler>
+		<Linker>
+			<Add library="gdi32" />
+			<Add library="user32" />
+			<Add library="kernel32" />
+			<Add library="comctl32" />
+		</Linker>
+		<Unit filename="external/SDL2_mixer/x86_64-w64-mingw32/bin/SDL2_mixer.dll" />
+		<Unit filename="external/SDL2_mixer/x86_64-w64-mingw32/bin/libFLAC-8.dll" />
+		<Unit filename="external/SDL2_mixer/x86_64-w64-mingw32/bin/libmodplug-1.dll" />
+		<Unit filename="external/SDL2_mixer/x86_64-w64-mingw32/bin/libmpg123-0.dll" />
+		<Unit filename="external/SDL2_mixer/x86_64-w64-mingw32/bin/libogg-0.dll" />
+		<Unit filename="external/SDL2_mixer/x86_64-w64-mingw32/bin/libopus-0.dll" />
+		<Unit filename="external/SDL2_mixer/x86_64-w64-mingw32/bin/libopusfile-0.dll" />
+		<Unit filename="external/SDL2_mixer/x86_64-w64-mingw32/bin/libvorbis-0.dll" />
+		<Unit filename="external/SDL2_mixer/x86_64-w64-mingw32/bin/libvorbisfile-3.dll" />
+		<Unit filename="src/engine/PDraw.cpp" />
+		<Unit filename="src/engine/PDraw.hpp" />
+		<Unit filename="src/engine/PFile.cpp" />
+		<Unit filename="src/engine/PFile.hpp" />
+		<Unit filename="src/engine/PFont.cpp" />
+		<Unit filename="src/engine/PFont.hpp" />
+		<Unit filename="src/engine/PGui.cpp" />
+		<Unit filename="src/engine/PGui.hpp" />
+		<Unit filename="src/engine/PInput.cpp" />
+		<Unit filename="src/engine/PInput.hpp" />
+		<Unit filename="src/engine/PLang.cpp" />
+		<Unit filename="src/engine/PLang.hpp" />
+		<Unit filename="src/engine/PLog.cpp" />
+		<Unit filename="src/engine/PLog.hpp" />
+		<Unit filename="src/engine/PRender.cpp" />
+		<Unit filename="src/engine/PRender.hpp" />
+		<Unit filename="src/engine/PSound.cpp" />
+		<Unit filename="src/engine/PSound.hpp" />
+		<Unit filename="src/engine/PUtils.cpp" />
+		<Unit filename="src/engine/PUtils.hpp" />
+		<Unit filename="src/engine/Piste.cpp" />
+		<Unit filename="src/engine/Piste.hpp" />
+		<Unit filename="src/engine/platform.hpp" />
+		<Unit filename="src/engine/render/PGl.cpp" />
+		<Unit filename="src/engine/render/PGl.hpp" />
+		<Unit filename="src/engine/render/PGlFuncs.cpp" />
+		<Unit filename="src/engine/render/PGlFuncs.hpp" />
+		<Unit filename="src/engine/render/PSdl.cpp" />
+		<Unit filename="src/engine/render/PSdl.hpp" />
+		<Unit filename="src/engine/render/PSdlSoft.cpp" />
+		<Unit filename="src/engine/render/PSdlSoft.hpp" />
+		<Unit filename="src/engine/types.hpp" />
+		<Unit filename="src/episode/episodeclass.cpp" />
+		<Unit filename="src/episode/episodeclass.hpp" />
+		<Unit filename="src/episode/mapstore.cpp" />
+		<Unit filename="src/episode/mapstore.hpp" />
+		<Unit filename="src/game/blocks.cpp" />
+		<Unit filename="src/game/blocks.hpp" />
+		<Unit filename="src/game/game.cpp" />
+		<Unit filename="src/game/game.hpp" />
+		<Unit filename="src/game/gifts.cpp" />
+		<Unit filename="src/game/gifts.hpp" />
+		<Unit filename="src/game/mapclass.cpp" />
+		<Unit filename="src/game/mapclass.hpp" />
+		<Unit filename="src/game/physics.cpp" />
+		<Unit filename="src/game/physics.hpp" />
+		<Unit filename="src/game/spriteclass.cpp" />
+		<Unit filename="src/game/spriteclass.hpp" />
+		<Unit filename="src/game/sprites.cpp" />
+		<Unit filename="src/game/sprites.hpp" />
+		<Unit filename="src/gfx/effect.cpp" />
+		<Unit filename="src/gfx/effect.hpp" />
+		<Unit filename="src/gfx/particle.cpp" />
+		<Unit filename="src/gfx/particle.hpp" />
+		<Unit filename="src/gfx/particles.cpp" />
+		<Unit filename="src/gfx/particles.hpp" />
+		<Unit filename="src/gfx/text.cpp" />
+		<Unit filename="src/gfx/text.hpp" />
+		<Unit filename="src/gui.cpp" />
+		<Unit filename="src/gui.hpp" />
+		<Unit filename="src/language.cpp" />
+		<Unit filename="src/language.hpp" />
+		<Unit filename="src/main.cpp" />
+		<Unit filename="src/save.cpp" />
+		<Unit filename="src/save.hpp" />
+		<Unit filename="src/screens/ending.cpp" />
+		<Unit filename="src/screens/intro.cpp" />
+		<Unit filename="src/screens/map.cpp" />
+		<Unit filename="src/screens/menu.cpp" />
+		<Unit filename="src/screens/playing.cpp" />
+		<Unit filename="src/screens/score.cpp" />
+		<Unit filename="src/screens/screens.cpp" />
+		<Unit filename="src/screens/screens.hpp" />
+		<Unit filename="src/settings.cpp" />
+		<Unit filename="src/settings.hpp" />
+		<Unit filename="src/sfx.cpp" />
+		<Unit filename="src/sfx.hpp" />
+		<Unit filename="src/system.cpp" />
+		<Unit filename="src/system.hpp" />
+		<Unit filename="src/version.hpp" />
+		<Extensions>
+			<lib_finder disable_auto="1" />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>

@@ -1,0 +1,2 @@
+[DEBUG]	PFile	- Find .\data\redirect.txt
+[INFO]	PFile	- .\data\redirect.txt not found
