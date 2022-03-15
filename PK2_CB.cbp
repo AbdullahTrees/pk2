@@ -54,14 +54,7 @@
 			<Add library="comctl32" />
 		</Linker>
 		<Unit filename="external/SDL2_mixer/x86_64-w64-mingw32/bin/SDL2_mixer.dll" />
-		<Unit filename="external/SDL2_mixer/x86_64-w64-mingw32/bin/libFLAC-8.dll" />
 		<Unit filename="external/SDL2_mixer/x86_64-w64-mingw32/bin/libmodplug-1.dll" />
-		<Unit filename="external/SDL2_mixer/x86_64-w64-mingw32/bin/libmpg123-0.dll" />
-		<Unit filename="external/SDL2_mixer/x86_64-w64-mingw32/bin/libogg-0.dll" />
-		<Unit filename="external/SDL2_mixer/x86_64-w64-mingw32/bin/libopus-0.dll" />
-		<Unit filename="external/SDL2_mixer/x86_64-w64-mingw32/bin/libopusfile-0.dll" />
-		<Unit filename="external/SDL2_mixer/x86_64-w64-mingw32/bin/libvorbis-0.dll" />
-		<Unit filename="external/SDL2_mixer/x86_64-w64-mingw32/bin/libvorbisfile-3.dll" />
 		<Unit filename="src/engine/PDraw.cpp" />
 		<Unit filename="src/engine/PDraw.hpp" />
 		<Unit filename="src/engine/PFile.cpp" />
