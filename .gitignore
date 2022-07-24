@@ -2,6 +2,7 @@
 /build/
 /doc/
 /obj/
+/android/
 
 /res/episodes/*
 !/res/episodes/rooster island 1/

@@ -26,9 +26,10 @@
 #include <cstring>
 #include <algorithm>
 
+#define SDL_MAIN_HANDLED
 #include <SDL.h>
 
-const char default_config[] = 
+const char default_config[] =
 "-- Render Method"
 "\r\n-- Possible options: sdl software opengl opengles default"
 "\r\n---------------"
@@ -54,10 +55,10 @@ static void read_config() {
 
 	PLang conf = PLang();
 	PFile::Path path = PFile::Path(data_path + "config.txt");
-	
+
 	bool ok = conf.Read_File(path);
 	if (!ok) {
-		
+
 		PFile::RW* rw = path.GetRW("w");
 		if (rw) {
 			rw->write(default_config, sizeof(default_config) - 1);
@@ -95,7 +96,7 @@ static void read_config() {
 
 		if (val > 0) {
 			audio_buffer_size = val;
-			
+
 
 		}
 	}
@@ -112,14 +113,14 @@ static void read_config() {
 		else if (strcmp(txt, "no") == 0)
 			audio_multi_thread = false;
 
-		
+
 	}
 	PLog::Write(PLog::DEBUG, "PK2", "Audio multi thread is %s", audio_multi_thread? "ON" : "OFF");
 
 }
 
 static void start_test(const char* arg) {
-	
+
 	if (arg == NULL) return;
 
 	PFile::Path path(arg);
@@ -146,12 +147,12 @@ static void quit() {
 
 	if (Game)
 		delete Game;
-	
+
 	if (Episode && !test_level) {
 		Save_Record(10); //Save #10 is the backup
 		delete Episode;
 	}
-	
+
 	if(tekstit)
 		delete tekstit;
 
@@ -261,13 +262,13 @@ int main(int argc, char *argv[]) {
 	if (redirect.Find()) {
 
 		PLog::Write(PLog::DEBUG, "PK2", "Found redirect");
-		
+
 		PFile::RW *redirect_rw = redirect.GetRW("r");
 
 		char* buffer;
 		int size = redirect_rw->to_buffer((void**) &buffer);
 		redirect_rw->close();
-		
+
 		if (size > 0) {
 
 			buffer[size - 1] = '\0';
@@ -275,7 +276,7 @@ int main(int argc, char *argv[]) {
 
 			data_path = buffer;
 			SDL_free(buffer);
-		
+
 		}
 
 	}
@@ -325,7 +326,7 @@ int main(int argc, char *argv[]) {
 
 				PLog::Write(PLog::DEBUG, "PK2", "Settings found on external");
 				external_dir = true;
-			
+
 			}
 			else {
 
@@ -401,7 +402,7 @@ int main(int argc, char *argv[]) {
 
 		PLog::Write(PLog::ERR, "PK2", PK2_error_msg);
 		PUtils::Show_Error(PK2_error_msg);
-		
+
 	}
 
 	quit();
