@@ -308,16 +308,9 @@ EpisodeClass::EpisodeClass(int save) {
 		}
 
 	}
-
-	if (!set) {
-		PLog::Write(PLog::ERR, "PK2", "Couldn't find %s", saves_list[save].episode);
-		return;
-	}
-
-	this->save_index = save;
 	
 	strcpy(this->player_name, saves_list[save].name);
-	this->next_level = saves_list[save].next_level;
+	this->level = saves_list[save].level;
 	this->player_score = saves_list[save].score;
 
 	for (int j = 0; j < EPISODI_MAX_LEVELS; j++) {
@@ -338,20 +331,6 @@ EpisodeClass::EpisodeClass(const char* player_name, episode_entry entry) {
 	for (int j = 0; j < EPISODI_MAX_LEVELS; j++)
 		this->level_status[j] = 0;
 	
-	PK2SAVE save;
-	save.empty = false;
-	strncpy(save.episode, entry.name.c_str(), sizeof(save.episode));
-	save.level = 1;
-	memset(save.level_status, 0, sizeof(save.level_status));
-	strncpy(save.name, player_name, sizeof(save.name));
-	save.score = 0;
-
-	save_index = saves_list.size();
-	saves_list.push_back(save);
-
-	// Save when starting a game
-	Save_Record(save_index);
-
 	this->Load();
 	
 }

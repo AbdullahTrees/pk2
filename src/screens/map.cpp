@@ -64,32 +64,31 @@ int PK_Draw_Map_Button(int x, int y, int type){
 int PK_Draw_Map() {
 
 	char luku[20];
+	int vali = 20;
 
 	PDraw::image_clip(bg_screen, 0, 0);
 
-	ShadowedText_Draw(Episode->entry.name.c_str(), 100, 72);
+	ShadowedText_Draw(Episode->entry.name.c_str(),100,72);
 
-	int ysize = ShadowedText_Draw(tekstit->Get_Text(PK_txt.map_total_score), 100, 92);
+	vali = ShadowedText_Draw(tekstit->Get_Text(PK_txt.map_total_score), 100, 92);
 	
 	sprintf(luku, "%i", Episode->player_score);
-	ShadowedText_Draw(luku, 100 + ysize + 15, 92);
+	ShadowedText_Draw(luku, 100 + vali + 15, 92);
 
 	if (Episode->scores.episode_top_score > 0) {
 
-		ysize = PDraw::font_write(fontti1,tekstit->Get_Text(PK_txt.map_episode_best_player),360,72);
-		PDraw::font_write(fontti1,Episode->scores.episode_top_player,360+ysize+10,72);
+		vali = PDraw::font_write(fontti1,tekstit->Get_Text(PK_txt.map_episode_best_player),360,72);
+		PDraw::font_write(fontti1,Episode->scores.episode_top_player,360+vali+10,72);
 		
-		ysize = PDraw::font_write(fontti1,tekstit->Get_Text(PK_txt.map_episode_hiscore),360,92);
+		vali = PDraw::font_write(fontti1,tekstit->Get_Text(PK_txt.map_episode_hiscore),360,92);
 		sprintf(luku, "%i", Episode->scores.episode_top_score);
-		PDraw::font_write(fontti2,luku,360+ysize+15,92);
+		PDraw::font_write(fontti2,luku,360+vali+15,92);
 
 	}
 
-	if (Episode->next_level < UINT32_MAX) {
-		ysize = PDraw::font_write(fontti1,tekstit->Get_Text(PK_txt.map_next_level),100,120);
-		sprintf(luku, "%i", Episode->next_level);
-		PDraw::font_write(fontti1,luku,100+ysize+15,120);
-	}
+	vali = PDraw::font_write(fontti1,tekstit->Get_Text(PK_txt.map_next_level),100,120);
+	sprintf(luku, "%i", Episode->level);
+	PDraw::font_write(fontti1,luku,100+vali+15,120);
 
 	//PK_Particles_Draw();
 
@@ -104,21 +103,37 @@ int PK_Draw_Map() {
 		WavetextSlow_Draw(tekstit->Get_Text(PK_txt.mainmenu_return), fontti2, 100, 430);
 	}
 
+	int paluu;
+	int icon;
+	int sinx = 0, cosy = 0;
+	int pekkaframe = 0;
+
+	u32 njakso = Episode->level_count;
+	for (u32 i = 0; i < Episode->level_count; i++)
+		if (!Episode->level_status[i] && Episode->levels_list[i].order < njakso)
+			njakso = Episode->levels_list[i].order; // Find the first unclear level
+	
+	if(Episode->level < njakso)
+		Episode->level = njakso;
+
 	for (u32 i = 0; i < Episode->level_count; i++) {
 		if (strcmp(Episode->levels_list[i].nimi,"")!=0 && Episode->levels_list[i].order > 0) {
 			
 			int type = -1;
-			if (Episode->levels_list[i].order == Episode->next_level)
+			if (Episode->levels_list[i].order == Episode->level)
 				type = 1;
-			if (Episode->levels_list[i].order > Episode->next_level)
+			if (Episode->levels_list[i].order > Episode->level)
 				type = 2;
 			if (Episode->level_status[i] != 0)
 				type = 0;
 
-			int x = Episode->levels_list[i].x;
-			int y = Episode->levels_list[i].y;
+			if (Episode->levels_list[i].x == 0)
+				Episode->levels_list[i].x = 172+i*30;
 
-			int icon = Episode->levels_list[i].icon;
+			if (Episode->levels_list[i].y == 0)
+				Episode->levels_list[i].y = 270;
+
+			icon = Episode->levels_list[i].icon;
 
 			int assets = game_assets;
 			if (icon >= 22) {
@@ -126,36 +141,22 @@ int PK_Draw_Map() {
 				assets = game_assets2;
 			}
 
-			//PDraw::image_clip(game_assets,x-4,y-4-30,1+(icon*27),452,27+(icon*27),478);
-			PDraw::image_cutclip(assets,x-9,y-14,1+(icon*28),452,28+(icon*28),479);
+			//PDraw::image_clip(game_assets,Episode->levels_list[i].x-4,Episode->levels_list[i].y-4-30,1+(icon*27),452,27+(icon*27),478);
+			PDraw::image_cutclip(assets,Episode->levels_list[i].x-9,Episode->levels_list[i].y-14,1+(icon*28),452,28+(icon*28),479);
 
 			if ( type == 1 ) {
-				int sinx = (int)(sin_table[degree%360]/2);
-				int cosy = (int)(cos_table[degree%360]/2);
-				int pekkaframe = 28*((degree%360)/120);
-				PDraw::image_cutclip(game_assets,x+sinx-12,y-17+cosy,157+pekkaframe,46,181+pekkaframe,79);
+				sinx = (int)(sin_table[degree%360]/2);
+				cosy = (int)(cos_table[degree%360]/2);
+				pekkaframe = 28*((degree%360)/120);
+				PDraw::image_cutclip(game_assets,Episode->levels_list[i].x+sinx-12,Episode->levels_list[i].y-17+cosy,157+pekkaframe,46,181+pekkaframe,79);
 			}
 
-			int paluu = PK_Draw_Map_Button(x-5, y-10, type);
+			paluu = PK_Draw_Map_Button(Episode->levels_list[i].x-5, Episode->levels_list[i].y-10, type);
 
 			if (Episode->level_status[i] & LEVEL_ALLAPPLES)
 				PDraw::image_cutclip(game_assets2, 
-					x - 10,
-					y, 45, 379, 58, 394);
-
-			if (Episode->next_level == UINT32_MAX) {
-
-				int dd = (degree / 3) % 60;
-				int order = Episode->levels_list[i].order;
-
-				int a = 0;
-				if (order < dd)
-					a = 100 - (dd - order) * 5;
-				
-				if (a > 0)
-					PDraw::image_cutcliptransparent(game_assets, 247, 1, 25, 25, x-9, y-14, a, COLOR_TURQUOISE);
-
-			}
+					Episode->levels_list[i].x - 10,
+					Episode->levels_list[i].y, 45, 379, 58, 394);
 
 			// if clicked
 			if (paluu == 2) {
@@ -177,7 +178,7 @@ int PK_Draw_Map() {
 
 			if (!Episode->hide_numbers) {
 				sprintf(luku, "%i", Episode->levels_list[i].order);
-				PDraw::font_write(fontti1,luku,x-12+2,y-29+2);
+				PDraw::font_write(fontti1,luku,Episode->levels_list[i].x-12+2,Episode->levels_list[i].y-29+2);
 			}
 
 			// if mouse hoover
@@ -192,9 +193,9 @@ int PK_Draw_Map() {
 					
 					PDraw::font_writealpha(fontti1,tekstit->Get_Text(PK_txt.map_level_best_player),info_x,info_y+50,75);
 					PDraw::font_write(fontti1,Episode->scores.top_player[i],info_x,info_y+62);
-					ysize = 8 + PDraw::font_writealpha(fontti1,tekstit->Get_Text(PK_txt.map_level_hiscore),info_x,info_y+74,75);
+					vali = 8 + PDraw::font_writealpha(fontti1,tekstit->Get_Text(PK_txt.map_level_hiscore),info_x,info_y+74,75);
 					sprintf(luku, "%i", Episode->scores.best_score[i]);
-					PDraw::font_write(fontti1,luku,info_x+ysize,info_y+75);
+					PDraw::font_write(fontti1,luku,info_x+vali,info_y+75);
 				
                 }
 
@@ -203,24 +204,24 @@ int PK_Draw_Map() {
 					PDraw::font_writealpha(fontti1,tekstit->Get_Text(PK_txt.map_level_fastest_player),info_x,info_y+98,75);
 					PDraw::font_write(fontti1,Episode->scores.fastest_player[i],info_x,info_y+110);
 
-					ysize = 8 + PDraw::font_writealpha(fontti1,tekstit->Get_Text(PK_txt.map_level_best_time),info_x,info_y+122,75);
+					vali = 8 + PDraw::font_writealpha(fontti1,tekstit->Get_Text(PK_txt.map_level_best_time),info_x,info_y+122,75);
 
 					s32 time = Episode->scores.best_time[i] / 60;
 					if (time < 0) {
 						time = -time;
-						ysize += PDraw::font_write(fontti1,"-",info_x+ysize,info_y+122);
+						vali += PDraw::font_write(fontti1,"-",info_x+vali,info_y+122);
 					}
 
 					s32 min = time / 60;
 					s32 sek = time % 60;
 
 					sprintf(luku, "%i", min);
-					ysize += PDraw::font_write(fontti1,luku,info_x+ysize,info_y+122);
-					ysize += PDraw::font_write(fontti1,":",info_x+ysize,info_y+122);
+					vali += PDraw::font_write(fontti1,luku,info_x+vali,info_y+122);
+					vali += PDraw::font_write(fontti1,":",info_x+vali,info_y+122);
                     if (sek < 10)
-                        ysize += PDraw::font_write(fontti1,"0",info_x+ysize,info_y+122);
+                        vali += PDraw::font_write(fontti1,"0",info_x+vali,info_y+122);
 					sprintf(luku, "%i", sek);
-					PDraw::font_write(fontti1,luku,info_x+ysize,info_y+122);
+					PDraw::font_write(fontti1,luku,info_x+vali,info_y+122);
 
 				}
 			}
@@ -279,6 +280,9 @@ int Play_Music() {
 
 int Screen_Map_Init() {
 
+	// Provisory
+	Settings_Save();
+
 	if (!Episode) {
 		PK2_Error("Episode not started");
 		return 1;
@@ -293,7 +297,6 @@ int Screen_Map_Init() {
 
 	degree = degree_temp;
 
-	// Load custom assets (should be done when creating Episode)
 	Episode->Load_Assets();
 
 	PFile::Path path = Episode->Get_Dir("map.bmp");
@@ -306,26 +309,6 @@ int Screen_Map_Init() {
 
 		PLog::Write(PLog::ERR, "PK2", "Can't load map bg");
 
-	}
-
-	Episode->next_level = UINT32_MAX;
-	for (u32 i = 0; i < Episode->level_count; i++) {
-		
-		if (!Episode->level_status[i] && Episode->levels_list[i].order < Episode->next_level) {
-			Episode->next_level = Episode->levels_list[i].order; // Find the first unclear level
-			break;
-		}
-
-	}
-
-	for (u32 i = 0; i < Episode->level_count; i++) {
-
-		if (Episode->levels_list[i].x == 0)
-			Episode->levels_list[i].x = 172+i*30;
-
-		if (Episode->levels_list[i].y == 0)
-			Episode->levels_list[i].y = 270;
-		
 	}
 
 	Play_Music();

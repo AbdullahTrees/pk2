@@ -12,8 +12,7 @@
 
 void PSdl::load_ui_texture(void* surface) {
 
-    ui_surface = (SDL_Surface*)surface;
-    ui_texture = SDL_CreateTextureFromSurface(renderer, (SDL_Surface*)ui_surface);
+    ui_texture = SDL_CreateTextureFromSurface(renderer, (SDL_Surface*)surface);
     if (ui_texture == NULL) {
 
         PLog::Write(PLog::ERR, "PSdl", "Couldn't load texture!");
@@ -69,7 +68,6 @@ int PSdl::set_vsync(bool set) {
 
     if (renderer) {
 
-        ui_texture = NULL;
         SDL_DestroyRenderer(renderer);
 
     }
@@ -105,38 +103,31 @@ void PSdl::update(void* _buffer8) {
     float prop_x = (float)w;
     float prop_y = (float)h;
     
-    if (ui_surface) {
+    for (auto opt : render_list) {
+        
+        u8 mod = opt.alpha * 256;
+        if (mod == 0)
+            continue;
+        
+        SDL_SetTextureAlphaMod(ui_texture, mod);
+        
+        SDL_Rect dst;
+        dst.x = opt.dst.x * prop_x;
+        dst.y = opt.dst.y * prop_y;
+        dst.w = opt.dst.w * prop_x;
+        dst.h = opt.dst.h * prop_y;
 
-        if (!ui_texture)
-            ui_texture = SDL_CreateTextureFromSurface(renderer, (SDL_Surface*)ui_surface);
+        SDL_Rect src;
+        src.x = opt.src.x * 1024;
+        src.y = opt.src.y * 1024;
+        src.w = opt.src.w * 1024;
+        src.h = opt.src.h * 1024;
 
-        for (auto opt : render_list) {
-            
-            u8 mod = opt.alpha * 256;
-            if (mod == 0)
-                continue;
-            
-            SDL_SetTextureAlphaMod(ui_texture, mod);
-            
-            SDL_Rect dst;
-            dst.x = opt.dst.x * prop_x;
-            dst.y = opt.dst.y * prop_y;
-            dst.w = opt.dst.w * prop_x;
-            dst.h = opt.dst.h * prop_y;
-
-            SDL_Rect src;
-            src.x = opt.src.x * 1024;
-            src.y = opt.src.y * 1024;
-            src.w = opt.src.w * 1024;
-            src.h = opt.src.h * 1024;
-
-            SDL_RenderCopy(renderer, ui_texture, &src, &dst);
-            
-        }
-
-        render_list.clear();
-
+        SDL_RenderCopy(renderer, ui_texture, &src, &dst);
+        
     }
+
+    render_list.clear();
 
     SDL_RenderPresent(renderer);
 
@@ -164,7 +155,6 @@ PSdl::PSdl(int width, int height, void* window) {
 PSdl::~PSdl() {
 
     SDL_DestroyRenderer(renderer);
-    SDL_FreeSurface(ui_surface);
     PLog::Write(PLog::DEBUG, "PSdl", "Terminated");
 
 }

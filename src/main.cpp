@@ -9,11 +9,6 @@
 //	"./pekka-kana-2 dev test rooster\ island\ 2/level13.map"
 //	Starts the level13.map on dev mode
 //#########################
-
-#define PK2_PORTABLE
-
-#include <windows.h>
-
 #include "engine/Piste.hpp"
 #include "version.hpp"
 
@@ -31,10 +26,9 @@
 #include <cstring>
 #include <algorithm>
 
-#define SDL_MAIN_HANDLED
 #include <SDL.h>
 
-const char default_config[] =
+const char default_config[] = 
 "-- Render Method"
 "\r\n-- Possible options: sdl software opengl opengles default"
 "\r\n---------------"
@@ -60,12 +54,10 @@ static void read_config() {
 
 	PLang conf = PLang();
 	PFile::Path path = PFile::Path(data_path + "config.txt");
-
-	//printf("%s", data_path.c_str());
-
+	
 	bool ok = conf.Read_File(path);
 	if (!ok) {
-
+		
 		PFile::RW* rw = path.GetRW("w");
 		if (rw) {
 			rw->write(default_config, sizeof(default_config) - 1);
@@ -94,8 +86,6 @@ static void read_config() {
 		else if (strcmp(txt, "opengles") == 0)
 			render_method = PRender::RENDERER_OPENGLES;
 
-
-
 	}
 
 	idx = conf.Search_Id("audio_buffer_size");
@@ -105,7 +95,7 @@ static void read_config() {
 
 		if (val > 0) {
 			audio_buffer_size = val;
-
+			
 
 		}
 	}
@@ -122,14 +112,14 @@ static void read_config() {
 		else if (strcmp(txt, "no") == 0)
 			audio_multi_thread = false;
 
-
+		
 	}
 	PLog::Write(PLog::DEBUG, "PK2", "Audio multi thread is %s", audio_multi_thread? "ON" : "OFF");
 
 }
 
 static void start_test(const char* arg) {
-
+	
 	if (arg == NULL) return;
 
 	PFile::Path path(arg);
@@ -145,17 +135,9 @@ static void start_test(const char* arg) {
 
 }
 
-// Clean memory (needed?)
 static void quit() {
 
-	if(PK2_error) {
-
-		PLog::Write(PLog::ERR, "PK2", PK2_error_msg);
-		PUtils::Show_Error(PK2_error_msg);
-
-	}
-
-	//Settings_Save();
+	Settings_Save();
 
 	PSound::stop_music();
 
@@ -164,12 +146,12 @@ static void quit() {
 
 	if (Game)
 		delete Game;
-
-	/*if (Episode && !test_level) {
+	
+	if (Episode && !test_level) {
 		Save_Record(10); //Save #10 is the backup
 		delete Episode;
-	}*/
-
+	}
+	
 	if(tekstit)
 		delete tekstit;
 
@@ -178,7 +160,6 @@ static void quit() {
 	PLog::Exit();
 
 }
-
 
 int main(int argc, char *argv[]) {
 
@@ -245,7 +226,7 @@ int main(int argc, char *argv[]) {
 
 	}
 
-	PLog::Init(PLog::ALL, PFile::Path("run.txt"), print_logs);
+	PLog::Init(PLog::ALL, PFile::Path(""), print_logs);
 
 	if(!path_set)
 		PUtils::Setcwd();
@@ -275,19 +256,18 @@ int main(int argc, char *argv[]) {
 
 	#endif //PK2_PORTABLE
 
-
 	// Read redirect file to change data directory
 	PFile::Path redirect = PFile::Path(data_path, "redirect.txt");
 	if (redirect.Find()) {
 
 		PLog::Write(PLog::DEBUG, "PK2", "Found redirect");
-
+		
 		PFile::RW *redirect_rw = redirect.GetRW("r");
 
 		char* buffer;
 		int size = redirect_rw->to_buffer((void**) &buffer);
 		redirect_rw->close();
-
+		
 		if (size > 0) {
 
 			buffer[size - 1] = '\0';
@@ -295,7 +275,7 @@ int main(int argc, char *argv[]) {
 
 			data_path = buffer;
 			SDL_free(buffer);
-
+		
 		}
 
 	}
@@ -345,7 +325,7 @@ int main(int argc, char *argv[]) {
 
 				PLog::Write(PLog::DEBUG, "PK2", "Settings found on external");
 				external_dir = true;
-
+			
 			}
 			else {
 
@@ -416,6 +396,13 @@ int main(int argc, char *argv[]) {
 	}
 
 	Piste::loop(Screen_Loop); //The game loop
+
+	if(PK2_error) {
+
+		PLog::Write(PLog::ERR, "PK2", PK2_error_msg);
+		PUtils::Show_Error(PK2_error_msg);
+		
+	}
 
 	quit();
 	return 0;

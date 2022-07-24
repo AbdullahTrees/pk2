@@ -10,7 +10,6 @@
 #include "gfx/particles.hpp"
 #include "episode/episodeclass.hpp"
 #include "settings.hpp"
-#include "gui.hpp"
 
 #include "engine/PLog.hpp"
 #include "engine/PSound.hpp"
@@ -80,7 +79,6 @@ int GameClass::Start() {
 	Sprites_clear(); //Reset sprites
 	Prototypes_ClearAll(); //Reset prototypes
 	Fadetext_Init(); //Reset fade text
-	GUI_Reset(); //Reset GUI
 
 	if (this->Open_Map() == 1)
 		PK2_Error("Can't load map");
@@ -97,13 +95,10 @@ int GameClass::Start() {
 
 int GameClass::Finnish() {
 
-	if (this->level_clear)
-		return -1;
+	if (PSound::start_music(PFile::Path("music" PE_SEP "hiscore.xm")) == -1)
+		PK2_Error("Can't find hiscore.xm");
 	
 	this->level_clear = true;
-
-	if (PSound::start_music(PFile::Path("music" PE_SEP "hiscore.xm")) == -1)
-		PK2_Error("Can't find hiscore.xm");	
 	
 	Episode->level_status[this->level_id] |= LEVEL_PASSED;
 	
@@ -111,8 +106,8 @@ int GameClass::Finnish() {
 		if (this->apples_got >= this->apples_count)
 			Episode->level_status[this->level_id] |= LEVEL_ALLAPPLES;
 
-	if (Episode->levels_list[this->level_id].order == Episode->next_level)
-		Episode->next_level++;
+	if (Episode->levels_list[this->level_id].order == Episode->level)
+		Episode->level++;
 	
 	PSound::set_musicvolume_now(Settings.music_max_volume);
 

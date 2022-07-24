@@ -480,7 +480,6 @@ void stop_music(){
 
 	Mix_HaltMusic();
 	overlay_playing = false;
-	playingMusic = PFile::Path("");
 
 }
 
@@ -528,7 +527,6 @@ int init(int buffer_size, bool multi_thread) {
 
 	PLog::Write(PLog::DEBUG, "PSound", "buffer size: %i", buffer_size);
 	PLog::Write(PLog::DEBUG, "PSound", "Desired %ihz 0x%x", PS_FREQ, PS_FORMAT);
-	PLog::Write(PLog::DEBUG, "PSound", "Audio driver: %s", SDL_GetCurrentAudioDriver());
 
 	int frequency;
 	u16 format;

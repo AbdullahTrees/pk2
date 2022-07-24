@@ -27,11 +27,9 @@ public:
 
 private:
 
-    SDL_Window* curr_window = NULL;
-    SDL_Renderer* renderer = NULL;
-
-    SDL_Texture* ui_texture = NULL;
-    SDL_Surface* ui_surface = NULL;
+    SDL_Window* curr_window;
+    SDL_Renderer* renderer;
+    SDL_Texture* ui_texture;
 
     SDL_Rect screen_dest;
     

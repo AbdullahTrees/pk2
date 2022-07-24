@@ -25,32 +25,32 @@
 
 #include <cstring>
 
-static double sprite_x;
-static double sprite_y;
-static double sprite_a;
-static double sprite_b;
+double sprite_x;
+double sprite_y;
+double sprite_a;
+double sprite_b;
 
-static double sprite_vasen;
-static double sprite_oikea;
-static double sprite_yla;
-static double sprite_ala;
+double sprite_vasen;
+double sprite_oikea;
+double sprite_yla;
+double sprite_ala;
 
-static int sprite_leveys;
-static int sprite_korkeus;
+int sprite_leveys;
+int sprite_korkeus;
 
-static int map_vasen;
-static int map_yla;
-static int x = 0;
-static int y = 0;
+int map_vasen;
+int map_yla;
+int x = 0;
+int y = 0;
 
-static bool oikealle;
-static bool vasemmalle;
-static bool ylos;
-static bool alas;
+bool oikealle;
+bool vasemmalle;
+bool ylos;
+bool alas;
 
-static bool vedessa;
+bool vedessa;
 
-static double max_nopeus;
+double max_nopeus;
 
 void Check_Blocks2(SpriteClass &sprite, PK2BLOCK &palikka) {
 
@@ -653,8 +653,7 @@ int Sprite_Movement(int i){
 			for (x = 0; x < palikat_x_lkm; x++) {
 				p = x + y*palikat_x_lkm;
 				if ( p < 300 )
-					if (!(&sprite == Player_Sprite && dev_mode && PInput::Keydown(PInput::Y)))
-						Check_Blocks(sprite, Game->palikat[p]);
+					Check_Blocks(sprite, Game->palikat[p]);
 			}
 		}
 	}
@@ -763,8 +762,7 @@ int Sprite_Movement(int i){
 					if (sprite2->b > 0)
 						spritepalikka.koodi = BLOCK_HISSI_VERT;
 
-					if (!(&sprite == Player_Sprite && dev_mode && PInput::Keydown(PInput::Y)))
-						Check_Blocks2(sprite, spritepalikka); //Colision sprite and sprite block
+					Check_Blocks2(sprite, spritepalikka); //Colision sprite and sprite block
 				}
 			}
 
@@ -986,16 +984,6 @@ int Sprite_Movement(int i){
 	/*****************************************************************************************/
 	/* Revisions                                                                             */
 	/*****************************************************************************************/
-
-	/*if (&sprite == Player_Sprite && dev_mode) {
-
-		oikealle   = true;
-		vasemmalle = true;
-		ylos       = true;
-		alas       = true;
-		printf("%f\n", sprite_b);
-
-	}*/
 
 	if (!oikealle)
 		if (sprite_a > 0)
