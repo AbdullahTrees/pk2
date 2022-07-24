@@ -1,6 +1,7 @@
 /bin/
 /build/
 /doc/
+/obj/
 
 /res/episodes/*
 !/res/episodes/rooster island 1/
