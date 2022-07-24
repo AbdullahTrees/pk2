@@ -343,12 +343,12 @@ void Draw_Menu_Main() {
 	}
 	my += 20;
 
-	/*if (Episode){
+	if (Episode){
 		if (Draw_Menu_Text(tekstit->Get_Text(PK_txt.mainmenu_save_game),180,my)){
 			menu_nyt = MENU_TALLENNA;
 		}
 		my += 20;
-	}*/
+	}
 
 	if (Draw_Menu_Text(tekstit->Get_Text(PK_txt.mainmenu_load_game),180,my)){
 		menu_nyt = MENU_LOAD;
@@ -552,13 +552,28 @@ void Draw_Menu_Load() {
 	PDraw::font_write(fontti1,tekstit->Get_Text(PK_txt.loadgame_info),50,110);
 	my = -20;
 
-	for ( int i = 0; i < saves_list.size(); i++ ) {
-
-		sprintf(ind, "%i", i+1);
-		strcpy(number,ind);
-		strcat(number,". ");
+	for ( int i = 0; i < SAVES_COUNT; i++ ) {
 		
-		strcat(number, saves_list[i].name);
+		if (i == 10) {
+			
+			if(saves_list[i].empty)
+				break;
+			strcpy(number, "bk. ");
+			my += 13;
+
+		} else {
+
+			sprintf(ind, "%i", i+1);
+			strcpy(number,ind);
+			strcat(number,". ");
+
+		}
+		
+		if (saves_list[i].empty)
+			strcat(number, "empty");
+		else
+			strcat(number, saves_list[i].name);
+		
 
 		if (Draw_Menu_Text(number,100,150+my)) {
 			if (!saves_list[i].empty) {
@@ -571,18 +586,27 @@ void Draw_Menu_Load() {
 					Episode = nullptr;
 				}
 
+				PSound::stop_music();
 				Episode = new EpisodeClass(i);
 				next_screen = SCREEN_MAP;
 			}
 		}
 
-		vali = 0;
-		vali = PDraw::font_write(fontti1,tekstit->Get_Text(PK_txt.loadgame_episode),400,150+my);
-		vali += PDraw::font_write(fontti1,saves_list[i].episode,400+vali,150+my);
-		vali = 0;
-		vali += PDraw::font_write(fontti1,tekstit->Get_Text(PK_txt.loadgame_level),400+vali,160+my);
-		sprintf(jaksoc, "%i", saves_list[i].level);
-		vali += PDraw::font_write(fontti1,jaksoc,400+vali,160+my);
+		if (!saves_list[i].empty) {
+
+			vali = 0;
+			vali += PDraw::font_write(fontti1,tekstit->Get_Text(PK_txt.loadgame_episode),400,150+my);
+			vali += PDraw::font_write(fontti1,saves_list[i].episode,400+vali,150+my);
+			
+			vali = 0;
+			if (saves_list[i].next_level != UINT32_MAX) {
+				vali += PDraw::font_write(fontti1,tekstit->Get_Text(PK_txt.loadgame_level),400+vali,160+my);
+				sprintf(jaksoc, "%u", saves_list[i].next_level);
+				vali += PDraw::font_write(fontti1,jaksoc,400+vali,160+my);
+			} else {
+				vali += PDraw::font_write(fontti1,"completed",400+vali,160+my);
+			}
+		}
 
 		my += 22;
 	}
@@ -596,7 +620,7 @@ void Draw_Menu_Load() {
 
 void Draw_Menu_Save() {
 
-	/*int my = 0, vali = 0;
+	int my = 0, vali = 0;
 	char number[32];
 	char jaksoc[8];
 	char ind[8];
@@ -607,7 +631,7 @@ void Draw_Menu_Save() {
 	PDraw::font_write(fontti1,tekstit->Get_Text(PK_txt.savegame_info),50,110);
 	my = -20;
 
-	for (int i = 0; i < saves_list.size(); i++) {
+	for (int i = 0; i < SAVES_COUNT - 1; i++) {
 
 		sprintf(ind, "%i", i+1);
 		strcpy(number, ind);
@@ -624,13 +648,17 @@ void Draw_Menu_Save() {
 		if (!saves_list[i].empty) {
 
 			vali = 0;
-			vali = PDraw::font_write(fontti1,tekstit->Get_Text(PK_txt.savegame_episode),400,150+my);
+			vali += PDraw::font_write(fontti1,tekstit->Get_Text(PK_txt.savegame_episode),400,150+my);
 			vali += PDraw::font_write(fontti1,saves_list[i].episode,400+vali,150+my);
+			
 			vali = 0;
-			vali += PDraw::font_write(fontti1,tekstit->Get_Text(PK_txt.savegame_level),400+vali,160+my);
-			sprintf(jaksoc, "%i", saves_list[i].level);
-			vali += PDraw::font_write(fontti1,jaksoc,400+vali,160+my);
-
+			if (saves_list[i].next_level != UINT32_MAX) {
+				vali += PDraw::font_write(fontti1,tekstit->Get_Text(PK_txt.savegame_level),400+vali,160+my);
+				sprintf(jaksoc, "%u", saves_list[i].next_level);
+				vali += PDraw::font_write(fontti1,jaksoc,400+vali,160+my);
+			} else {
+				vali += PDraw::font_write(fontti1,"completed",400+vali,160+my);
+			}
 		}
 
 		my += 22;
@@ -639,7 +667,7 @@ void Draw_Menu_Save() {
 	my += 20;
 
 	if (Draw_Menu_Text(tekstit->Get_Text(PK_txt.mainmenu_return),180,400))
-		menu_nyt = MENU_MAIN;*/
+		menu_nyt = MENU_MAIN;
 
 }
 
@@ -1223,6 +1251,7 @@ void Draw_Menu_Episodes() {
 				Episode = nullptr;
 			}
 
+			PSound::stop_music();
 			Episode = new EpisodeClass(menu_name, episodes[i]);
 			next_screen = SCREEN_MAP;
 		}

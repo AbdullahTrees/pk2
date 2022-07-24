@@ -317,7 +317,7 @@ EpisodeClass::EpisodeClass(int save) {
 	this->save_index = save;
 	
 	strcpy(this->player_name, saves_list[save].name);
-	this->level = saves_list[save].level;
+	this->next_level = saves_list[save].next_level;
 	this->player_score = saves_list[save].score;
 
 	for (int j = 0; j < EPISODI_MAX_LEVELS; j++) {
