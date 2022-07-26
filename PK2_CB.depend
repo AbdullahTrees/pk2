@@ -2824,7 +2824,7 @@
 	"engine/types.hpp"
 	"engine/PFile.hpp"
 
-1658664206 source:c:\users\abdullah\documents\github\pk2\src\main.cpp
+1658665644 source:c:\users\abdullah\documents\github\pk2\src\main.cpp
 	"engine/Piste.hpp"
 	"version.hpp"
 	"screens/screens.hpp"
@@ -2973,7 +2973,7 @@
 	"system.hpp"
 	"settings.hpp"
 
-1611876899 source:c:\users\abdullah\documents\github\pk2\src\screens\score.cpp
+1658837776 source:c:\users\abdullah\documents\github\pk2\src\screens\score.cpp
 	"screens/screens.hpp"
 	"gfx/text.hpp"
 	"language.hpp"

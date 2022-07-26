@@ -9,6 +9,8 @@
 //	"./pekka-kana-2 dev test rooster\ island\ 2/level13.map"
 //	Starts the level13.map on dev mode
 //#########################
+#define PK2_PORTABLE
+
 #include "engine/Piste.hpp"
 #include "version.hpp"
 

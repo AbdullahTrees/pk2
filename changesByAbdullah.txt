@@ -3,7 +3,5 @@ CHANGES DONE BY ABDULLAH TO THE CODE BASE PEKKA KANA 2
 
 --> main.cpp
 
-Line 243
-> PLog::Init(PLog::ALL, PFile::Path(""), print_logs);
-PLog::Init(PLog::ALL, PFile::Path("run.txt"), print_logs);
-
+Line 29
+`#define SDL_MAIN_HANDLED`  added (Winmain not found linker error happens otherwise)

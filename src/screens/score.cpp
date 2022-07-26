@@ -55,7 +55,7 @@ bool map_new_time_record;
 bool episode_new_record;
 
 int LevelScore_Compare(int level, u32 score, u32 apples, s32 time){
-	
+
 	int ret = 0;
 
 	if (!Episode->scores.has_score[level] || (score > Episode->scores.best_score[level])) {
@@ -65,7 +65,7 @@ int LevelScore_Compare(int level, u32 score, u32 apples, s32 time){
 		Episode->scores.has_score[level] = true;
 		map_new_record = true;
 		ret++;
-	
+
 	}
 
 	if (Game->apples_count > 0) {
@@ -155,19 +155,19 @@ int Draw_ScoreCount() {
 	ShadowedText_Draw(tekstit->Get_Text(PK_txt.score_screen_level_score), 100, my);
 
 	total_score = bonus_score + time_score + energy_score + gifts_score;
-	
+
 	sprintf(luku, "%i", total_score);
 	ShadowedText_Draw(luku, 400, my);
 	my += 70;
 
 	ShadowedText_Draw(tekstit->Get_Text(PK_txt.score_screen_bonus_score), 100, my);
-	
+
 	sprintf(luku, "%i", bonus_score);
 	ShadowedText_Draw(luku, 400, my);
 	my += 30;
 
 	ShadowedText_Draw(tekstit->Get_Text(PK_txt.score_screen_time_score), 100, my);
-	
+
 	sprintf(luku, "%i", time_score);
 	ShadowedText_Draw(luku, 400, my);
 	my += 30;
@@ -179,14 +179,14 @@ int Draw_ScoreCount() {
 	my += 30;
 
 	ShadowedText_Draw(tekstit->Get_Text(PK_txt.score_screen_item_score), 100, my);
-	
+
 	sprintf(luku, "%i", gifts_score);
 	ShadowedText_Draw(luku, 400, my);
 	my += 40;
 
 	x = 110;
 	for (int i = 0; i < MAX_GIFTS; i++) {
-		
+
 		if (Gifts_Get(i) != -1)	{
 			Gifts_Draw(i, x, my);
 			x += 38;
@@ -204,14 +204,14 @@ int Draw_ScoreCount() {
 		for (; i < apples_counted; i++) {
 
 			if (apples_counted >= Game->apples_count)
-				PDraw::image_cutclip(game_assets2, apples_xoffset + i * 32 + rand()%2, my + rand()%2, 61, 379, 87, 406);
+				PDraw::image_cutclip(2, apples_xoffset + i * 32 + rand()%2, my + rand()%2, 61, 379, 87, 406);
 			else
-				PDraw::image_cutclip(game_assets2, apples_xoffset + i * 32, my, 61, 379, 87, 406);
+				PDraw::image_cutclip(2, apples_xoffset + i * 32, my, 61, 379, 87, 406);
 
 		}
 		for (; i < Game->apples_count; i++)
-			PDraw::image_cutcliptransparent(game_assets2, 61, 379, 26, 26, apples_xoffset + i * 32, my, 20, 0);
-		
+			PDraw::image_cutcliptransparent(2, 61, 379, 26, 26, apples_xoffset + i * 32, my, 20, 0);
+
 	}
 	PDraw::reset_mask();
 
@@ -221,9 +221,9 @@ int Draw_ScoreCount() {
 	my += 40;
 
 	if (counting_phase == COUNT_ENDED) {
-		
+
 		ShadowedText_Draw(tekstit->Get_Text(PK_txt.score_screen_total_score), 100, my);
-		
+
 		sprintf(luku, "%i", Episode->player_score);
 		ShadowedText_Draw(luku, 400, my);
 		my += 25;
@@ -273,7 +273,7 @@ int Screen_ScoreCount_Init() {
 
 	if(PUtils::Is_Mobile())
 		GUI_Change(UI_CURSOR);
-	
+
 	PDraw::set_offset(640, 480);
 
 	PDraw::image_delete(bg_screen);
@@ -312,9 +312,9 @@ int Screen_ScoreCount_Init() {
 
 	/* Check if broken level score and time record */
 	int episode_result = EpisodeScore_Compare(Episode->player_score);
-	int level_result = 
+	int level_result =
 		LevelScore_Compare(Game->level_id, temp_score, Game->apples_got, Game->map->aika * TIME_FPS - Game->timeout);
-	
+
 	if (episode_result > 0 || level_result > 0) {
 
 		Episode->Save_Scores();
@@ -340,7 +340,7 @@ int Screen_ScoreCount() {
 	degree = 1 + degree % 360;
 
 	if (counting_delay == 0) {
-	
+
 		if (bonus_score < Game->score) {
 
 			counting_phase = COUNT_BONUS;
@@ -379,11 +379,11 @@ int Screen_ScoreCount() {
 			Play_MenuSFX(score_sound, 70);
 
 		} else if (Gifts_Count() > 0) {
-			
+
 			counting_phase = COUNT_GIFTS;
 			counting_delay = 30;
 			gifts_score += Gifts_GetProtot(0)->pisteet + 500;
-			Gifts_Remove(0); 
+			Gifts_Remove(0);
 			Play_MenuSFX(jump_sound, 100);
 
 		} else if (apples_not_counted > 0) {
@@ -397,11 +397,11 @@ int Screen_ScoreCount() {
 
 			if (apples_not_counted == 0)
 				counting_delay = 20;
-		
+
 		} else {
-			
+
 			counting_phase = COUNT_ENDED;
-		
+
 		}
 	}
 
@@ -435,7 +435,7 @@ int Screen_ScoreCount() {
 
 			for (int i = 0; i < Gifts_Count(); i++)
 				gifts_score += Gifts_GetProtot(i)->pisteet + 500;
-			
+
 			Gifts_Clean();
 
 			key_delay = 20;
@@ -449,15 +449,15 @@ int Screen_ScoreCount() {
 		if (Game->level_id == EPISODI_MAX_LEVELS - 1) {
 
 			next_screen = SCREEN_END;
-		
+
 		} else if (Game->level_id == Episode->level_count - 1) {
 
 			next_screen = SCREEN_END;
-		
+
 		} else {
 
 			next_screen = SCREEN_MAP;
-		
+
 		}
 
 		delete Game;
